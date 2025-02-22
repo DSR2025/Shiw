@@ -1,0 +1,93 @@
+/**************************************/
+
+@font-face {
+  font-family: "Kannada";
+  src: url("../fonts/Kannada.ttc") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Great Vibes";
+  src: url("../fonts/GreatVibes-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gurmunkhi";
+  src: url("../fonts/Gurmukhi.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+  transition: 0.3s ease-in-out;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: "Kannada";
+  background-color: #f5f5f5;
+}
+
+/* glob */
+
+.list--reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  padding: 0;
+  border: 0;
+  border-color: transparent;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 130px;
+  padding-left: 130px;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+  left: -9999px;
+}
+
+
+/* Hover focus active */
+
+
+
+/* hero + header */
