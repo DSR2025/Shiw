@@ -1,25 +1,75 @@
-/**************************************/
+@font-face {
+  font-family: 'Fira Sans';
+  src: local('Fira Sans Italic'), local('FiraSans-Italic'),
+    url('../fonts/FiraSans-Italic.woff') format('woff'),
+    url('../fonts/FiraSans-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
 
 @font-face {
-  font-family: "Kannada";
-  src: url("../fonts/Kannada.ttc") format("truetype");
+  font-family: 'Fira Sans';
+  src: local('Fira Sans Bold'), local('FiraSans-Bold'),
+    url('../fonts/FiraSans-Bold.woff') format('woff'),
+    url('../fonts/FiraSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: local('Fira Sans Medium Italic'), local('FiraSansMedium-Italic'),
+    url('../fonts/FiraSansMedium-Italic.woff') format('woff'),
+    url('../fonts/FiraSansMedium-Italic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: local('Fira Sans Light'), local('FiraSansLight'),
+    url('../fonts/FiraSansLight.woff') format('woff'),
+    url('../fonts/FiraSansLight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: local('Fira Sans'), local('FiraSans'),
+    url('../fonts/FiraSans.woff') format('woff'),
+    url('../fonts/FiraSans.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Great Vibes";
-  src: url("../fonts/GreatVibes-Regular.ttf") format("truetype");
-  font-weight: normal;
+  font-family: 'Fira Sans';
+  src: local('Fira Sans Medium'), local('FiraSansMedium'),
+    url('../fonts/FiraSansMedium.woff') format('woff'),
+    url('../fonts/FiraSansMedium.ttf') format('truetype');
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Gurmunkhi";
-  src: url("../fonts/Gurmukhi.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'Fira Sans';
+  src: local('Fira Sans Light Italic'), local('FiraSansLight-Italic'),
+    url('../fonts/FiraSansLight-Italic.woff') format('woff'),
+    url('../fonts/FiraSansLight-Italic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
 }
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: local('Fira Sans Bold Italic'), local('FiraSans-BoldItalic'),
+    url('../fonts/FiraSans-BoldItalic.woff') format('woff'),
+    url('../fonts/FiraSans-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
 
 html {
   box-sizing: border-box;
@@ -44,7 +94,7 @@ img {
 
 body {
   font-family: "Kannada";
-  background-color: #f5f5f5;
+  background-color: #F8F8F8;
 }
 
 /* glob */
@@ -88,6 +138,319 @@ body {
 
 /* Hover focus active */
 
+.burger-menu:hover .bar {
+  background-color: #C0B08A;
+}
+
+.cross path:hover {
+  fill: #C0B08A;
+}
+
+.burger-menu.active .bar {
+  background-color: #C0B08A;
+}
+
+.telegram path:hover {
+  fill: #C0B08A;
+}
+
+.whatsapp path:hover {
+  fill: #C0B08A;
+}
+
+.header_nav_link:hover {
+  color: #C0B08A;
+}
+
+/* header */
+
+.header_shiw {
+  margin-bottom: 24px;
+}
+
+.header_content {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 0;
+  align-items: center;
+}
+
+.header_socials_wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.telegram path {
+  transition: fill .3s ease-in-out;
+}
+
+.whatsapp path {
+  transition: fill .3s ease-in-out;
+}
+
+.header_shiw {
+  border-bottom: 1.5px solid #C0B08A;
+}
+
+.catalog_preview_link:hover {
+  color: #C0B08A;
+}
+
+.catalog_preview_link:hover .catalog_preview_arrow svg path {
+  fill: #C0B08A;
+}
 
 
-/* hero + header */
+/* burger */
+
+.burger-menu {
+  cursor: pointer;
+  width: 34px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.bar {
+  width: 100%;
+  height: 1.5px;
+  background: #2B2B2B;
+  transition: all 0.3s ease;
+}
+
+.burger_closed {
+  cursor: pointer;
+  width: 34px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bar_closed {
+  width: 100%;
+  height: 1.5px;
+  background: #2B2B2B;
+}
+
+.burger_close_btn_wrapper {
+  margin-bottom: 55px;
+}
+
+.cross path {
+  transition: fill .3s ease-in-out;
+}
+
+
+/* Стили для бокового меню */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 510px;
+  height: 100%;
+  background: #F8F8F8;
+  transition: left 0.3s ease;
+  padding: 29px 125px 0px 130px;
+
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.burger_list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.header_nav_link {
+  color: #3A3939;
+  font-family: "Fira Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-transform: uppercase;
+  transition: .3s ease-in-out;
+}
+
+/* ************* */
+
+.hero_sect {
+  background-image: url(../img/main_page/hero_main.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 120vh;
+  width: 100%;
+  margin-bottom: 144px;
+}
+
+
+/* about_advantages */
+
+.about_advantages {
+  background-color: #2B2B2B;
+  margin-bottom: 56px;
+
+}
+
+.about_advantages_list {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.about_advantages_content {
+  padding: 24px 0;
+}
+
+.about_advantages_item {
+  color: #D6C49A;
+  font-family: "Fira Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+/* about */
+.section_title {
+  margin: 0;
+  color: #2B2B2B;
+  font-family: "Fira Sans";
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 70px;
+  /* 125% */
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.about_content {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 144px;
+}
+
+.about_content_left_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  flex: 1;
+  max-width: 580px;
+}
+
+.about_left_title {
+  margin: 0;
+  color: #2B2B2B;
+  font-family: "Fira Sans";
+  font-size: 92px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-transform: uppercase;
+  max-width: 580px;
+}
+
+.about_left_image {
+  max-width: 580px;
+  object-fit: cover;
+  height: 342px;
+}
+
+.about_right_descr {
+  margin: 0;
+  color: #2B2B2B;
+  font-family: "Fira Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin-bottom: 24px;
+  max-width: 580px;
+  text-align: left;
+}
+
+.about_images_right_wrapper {
+  display: flex;
+  gap: 20px;
+
+}
+
+.big_img {
+  max-width: 380px;
+  object-fit: cover;
+}
+
+.about_small_images_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+/* catalog_preview */
+
+.catalog_preview_custom {
+  border-bottom: 1.5px solid #C0B08A;
+  margin-bottom: 56px;
+
+}
+
+.catalog_preview_list {
+  display: flex;
+  gap: 20px;
+}
+
+.catalog_preview_item {
+  max-width: 280px;
+  min-height: 420px;
+  flex: 1;
+
+}
+
+.catalog_preview_image {
+  object-fit: cover;
+}
+
+.catalog_preview_link {
+  color: #2B2B2B;
+  font-family: "Fira Sans";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.catalog_preview_item_custom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.catalog_preview_arrow{
+  padding-left: 16px;
+}
+
+.catalog_preview_list_main_wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+.catalog_preview{
+  margin-bottom: 144px;
+}
+
+.catalog_preview_link .catalog_preview_arrow svg path {
+  transition: fill 0.3s ease;
+}
+
