@@ -25,3 +25,25 @@ document.addEventListener('click', (e) => {
 
 
 
+function init() {
+    // Создаем карту с центром по вашим координатам и зумом 15
+    var myMap = new ymaps.Map("map", {
+        center: [56.313623, 44.028301], // Ваши координаты
+        zoom: 15 // Масштаб
+    });
+
+    // Создаем черно-белую метку
+    var myPlacemark = new ymaps.Placemark([56.313623, 44.028301], {
+        hintContent: 'SHIW' // Всплывающая подсказка
+    }, {
+        preset: 'twirl#blackIcon' // Черно-белая иконка
+    });
+
+    // Добавляем метку на карту
+    myMap.geoObjects.add(myPlacemark);
+
+    // Добавляем элемент управления для масштабирования
+    myMap.controls.add('smallZoomControl');
+}
+
+ymaps.ready(init);
