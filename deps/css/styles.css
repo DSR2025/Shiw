@@ -1156,3 +1156,44 @@ body {
   text-underline-offset: auto;
 
 }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeInUp {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* анимация прокрутки */
+/* .about_advantages_list {
+  animation: marquee 10s linear infinite; 
+  white-space: nowrap; 
+}
+
+.about_advantages_item {
+  color: #D6C49A;
+  font-family: "Fira Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin-right: 40px; 
+}
+
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%); 
+  }
+  100% {
+    transform: translateX(-100%); 
+  }
+} */

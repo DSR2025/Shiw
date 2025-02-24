@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
         menu.addEventListener('click', function() {
             const subMenu = menu.nextElementSibling;
 
-            // Закрываем все подменю и убираем активный цвет у всех меню
             document.querySelectorAll('.catalog_sub_menu.active').forEach(openSubMenu => {
                 openSubMenu.classList.remove('active');
                 openSubMenu.style.height = "0px";
@@ -16,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 activeMenu.classList.remove('active');
             });
 
-            // Открываем новое меню и меняем цвет
             subMenu.style.display = "flex";
             setTimeout(() => {
                 subMenu.classList.add('active');
@@ -24,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 subMenu.style.opacity = "1";
             }, 10);
 
-            menu.classList.add('active'); // Добавляем активный класс для смены цвета
+            menu.classList.add('active'); 
         });
     });
 });
