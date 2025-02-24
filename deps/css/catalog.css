@@ -1,0 +1,181 @@
+.catalog {
+    border-top: 1.5px solid #C0B08A;
+    border-bottom: 1.5px solid #C0B08A;
+    margin-bottom: 56px;
+}
+
+.catalog_container {
+    width: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.catalog_navigation_wrapper {
+    display: flex;
+    border-top: 1.5px solid #2B2B2B;
+    display: flex;
+    max-width: 280px;
+    flex-grow: 1;
+    background-color: #2B2B2B;
+    padding: 24px 0px;
+}
+
+.catalog_nabvbar {
+    width: 100%;
+}
+
+
+.header_shiw {
+    margin-bottom: 0px;
+}
+
+.catalog_main_menu {
+    color: #F8F8F8;
+    font-family: "Fira Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-transform: uppercase;
+    padding-left: 18px;
+    cursor: pointer;
+}
+
+
+
+.catalog_nabvbar {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+
+.catalog_content_top {
+    display: flex;
+    gap: 20px;
+}
+
+.catalog_right_image {
+    width: 100%;
+    padding: 24px 0;
+    flex: 1;
+    background-color: #F8F8F8;
+
+}
+
+.catalog_sub_image {
+    object-fit: cover;
+    height: 100%;
+}
+
+.catalog_sub_menu {
+    padding: 16px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-top: 1px solid #C0B08A;
+    border-bottom: 1px solid #C0B08A;
+}
+
+.catalog_sub_link {
+    padding-left: 18px;
+    color: #F8F8F8;
+    font-family: "Fira Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    transition: .3s ease-in-out;
+}
+
+.catalog_sub_menu {
+    display: none;
+}
+
+.catalog_sub_menu.active {
+    display: flex;
+}
+
+.catalog_sub_menu {
+    display: none;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.4s ease, height 0.4s ease;
+}
+
+.catalog_sub_menu.active {
+    display: flex;
+    height: auto;
+    opacity: 1;
+}
+
+.catalog_main_menu.active {
+    color: #D6C49A;
+    font-weight: 500;
+}
+
+.catalog_cards_list {
+    display: flex;
+    row-gap: 56px;
+    column-gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 56px;
+}
+
+.catalog_card {
+    max-width: 280px;
+}
+
+.catalog_card_content {
+    display: flex;
+    flex-direction: column;
+}
+
+.catalog_card_img {
+    object-fit: cover;
+    margin-bottom: 16px;
+}
+
+.catalog_card_name {
+    margin: 0;
+    margin-bottom: 8px;
+    color: #2B2B2B;
+    font-family: "Fira Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.catalog_card_price {
+    margin: 0;
+    color: #2B2B2B;
+    font-family: "Fira Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.catalog_pagination_page{
+    margin: 0;
+    color: #2B2B2B;
+font-family: "Fira Sans";
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+text-transform: uppercase;
+}
+
+.catalog_pagination_wrapper{
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    margin-bottom: 64px;
+    align-items: center;
+}
+

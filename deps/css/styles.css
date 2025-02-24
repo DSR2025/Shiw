@@ -92,6 +92,25 @@ img {
   max-width: 100%;
 }
 
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Затемнение */
+  backdrop-filter: blur(5px); /* Размытие */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 9; /* Ниже меню, но выше контента */
+}
+
+#overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
 body {
   font-family: "Fira Sans";
   background-color: #F8F8F8;
@@ -178,6 +197,15 @@ body {
   color: #C0B08A;
 }
 
+.footer_contract:hover{
+  color: #C0B08A;
+}
+
+.footer_left_bottom_link:hover{
+  color: #C0B08A;
+  
+}
+
 /* header */
 
 .header_shiw {
@@ -238,6 +266,10 @@ body {
   color: #C0B08A;
 }
 
+.catalog_sub_link:hover{
+  color: #D6C49A;
+}
+
 /* burger */
 
 .burger-menu {
@@ -285,6 +317,7 @@ body {
 .sidebar {
   position: fixed;
   top: 0;
+  z-index: 10;
   left: -100%;
   width: 510px;
   height: 100%;
@@ -473,6 +506,11 @@ body {
   align-items: center;
 }
 
+.catalog_arrow_prev{
+  width: 40px;
+  transform: translateY(-2px);
+}
+
 .catalog_preview_arrow {
   padding-left: 16px;
 }
@@ -524,7 +562,7 @@ body {
 
 .individual_title_gold {
   position: absolute;
-  top: 126px;
+  top: 128px;
   right: 134px;
   color: #C0B08A;
   font-family: "Fira Sans";
@@ -660,6 +698,7 @@ body {
 }
 
 .sale_btn {
+  display: flex;
   color: #F8F8F8;
   font-family: "Fira Sans";
   font-size: 32px;
@@ -683,6 +722,8 @@ body {
 }
 
 .sale_btn_arrow {
+  display: block;
+  transform: translateY(-2px);
   margin-left: 16px;
 }
 
@@ -1027,6 +1068,7 @@ body {
 
 .footer_contract {
   margin: 0;
+  transition: .3s ease-in-out;
   color: #F8F8F8;
   font-family: "Fira Sans";
   font-size: 16px;
@@ -1103,4 +1145,14 @@ body {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+.footer_left_bottom_link{
+  transition: .3s ease-in-out;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+
 }
