@@ -206,6 +206,19 @@ body {
   
 }
 
+.card_btn_back:hover {
+  color: #C0B08A;
+}
+
+.card_btn_back:hover .card_arrow path {
+  fill: #C0B08A; 
+}
+
+.card_gallery_pagination_link:hover .card_pag_left path,
+.card_gallery_pagination_link:hover .card_pag_right path {
+    fill: #C0B08A; 
+}
+
 /* header */
 
 .header_shiw {

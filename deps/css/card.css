@@ -1,0 +1,81 @@
+.card_content {
+    display: flex;
+
+}
+
+.card_btn_back {
+    transition: .3s ease-in-out;
+    color: #2B2B2B;
+    font-family: "Fira Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.card_arrow path {
+    transition: fill 0.3s ease;
+}
+
+.card_content {
+    margin-bottom: 120px;
+}
+
+.card_arrow_wrapper {
+    margin-right: 10px;
+}
+
+.card_back_btn_wrapper {
+    margin-bottom: 56px;
+}
+
+.card_gallery_wrapper {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.card_gallery_link {
+    filter: brightness(55%);
+}
+
+.card_gallery_btns_list {
+    display: flex;
+    flex-direction: column;
+    height: 664px;
+    gap: 16px;
+}
+
+.card_gallery_item {
+    max-width: 80px;
+    max-height: 120px;
+}
+
+.card_gallery_btn_image {
+    object-fit: cover;
+}
+
+.card_gallery_image_big {
+    object-fit: cover;
+}
+
+.card_gallery_big {
+    max-width: 442px;
+    max-height: 664px;
+}
+
+.card_gellery_pagination_wrapper {
+    display: flex;
+    gap: 40px;
+    justify-content: flex-end;
+}
+
+.card_gallery_link.active {
+    filter: brightness(100%);
+}
+
+.card_pag_left path,
+.card_pag_right path {
+    fill: #2B2B2B;
+    transition: fill 0.3s ease;
+}
