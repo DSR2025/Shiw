@@ -1210,3 +1210,11 @@ body {
     transform: translateX(-100%); 
   }
 } */
+
+.header_burger_wrapper {
+  width: 88px;
+}
+
+.footer_right {
+  padding-left: 48px;
+}

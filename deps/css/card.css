@@ -18,7 +18,7 @@
 }
 
 .card_content {
-    margin-bottom: 120px;
+    display: flex;
 }
 
 .card_arrow_wrapper {
@@ -79,3 +79,101 @@
     fill: #2B2B2B;
     transition: fill 0.3s ease;
 }
+
+.card_right_wrapper {
+    padding-top: 99px;
+    padding-left: 110px;
+}
+
+.card_name {
+    margin: 0;
+    margin-bottom: 16px;
+    color: #2B2B2B;
+    font-family: "Fira Sans";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.card_number {
+    margin: 0;
+    margin-bottom: 56px;
+    color: #B5B5B5;
+    font-family: "Fira Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.card_description {
+    margin: 0;
+    margin-bottom: 16px;
+    color: #2B2B2B;
+    font-family: "Fira Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.card_price {
+    margin: 0;
+    margin-bottom: 56px;
+    color: #2B2B2B;
+    font-family: "Fira Sans";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.card_btn_wrapper {
+    display: flex
+}
+
+.card_btn_left {
+    display: flex;
+    align-items: center;
+    padding: 12px 52px;
+    outline: 1px solid#2B2B2B;
+    color: #2B2B2B;
+    font-family: "Fira Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.card_btn_arrow_wrapper {
+    margin-left: 10px;
+}
+
+.card_gallery_btn_arrow {
+    transform: translateY(-2px);
+}
+
+.card_btn_right_wrapper {
+    display: flex;
+    outline: 1px solid #2B2B2B;
+    background-color: #2B2B2B;
+    padding: 7px 36px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.card_left_wrapper {
+    padding-right: 48px;
+    padding-top: 24px;
+    padding-bottom: 120px;
+    border-right: 1.5px solid #C0B08A;
+}
+
+.header_shiw {
+    margin-bottom: 0;
+}
+
