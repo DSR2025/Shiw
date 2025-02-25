@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shiw</title>
+    <link rel="stylesheet" href="css/normilize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/catalog.css">
+</head>
+
+<body>
+    <div id="overlay"></div>
+    <header class="header_shiw">
+        <div class="header_container container">
+            <div class="header_content">
+                <div class="header_burger_wrapper">
+                    <div class="burger-menu" id="burgerMenu">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </div>
+                <nav class="sidebar" id="sidebar">
+                    <div class="burger_close_btn_wrapper">
+                        <a class="burger_close" href="#">
+                            <svg class="cross" width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M15.0404 14L27.7846 1.25582C28.0719 0.968551 28.0719 0.502805 27.7846 0.21554C27.4973 -0.0717242 27.0316 -0.0717242 26.7443 0.21554L14.0001 12.9596L1.25588 0.215448C0.96862 -0.0718161 0.502874 -0.0718161 0.215609 0.215448C-0.0717472 0.502713 -0.0717472 0.968459 0.215609 1.25572L12.9597 14L0.215517 26.7442C-0.0718391 27.0315 -0.0718391 27.4972 0.215517 27.7846C0.359149 27.9282 0.547379 28 0.735701 28C0.924023 28 1.11225 27.9282 1.25588 27.7846L14.0001 15.0404L26.7443 27.7846C26.888 27.9282 27.0761 28 27.2644 28C27.4528 28 27.641 27.9282 27.7846 27.7846C28.0719 27.4972 28.0719 27.0315 27.7846 26.7442L15.0404 14Z"
+                                    fill="#2B2B2B" />
+                            </svg>
+                        </a>
+                    </div>
+                    <ul class="burger_list list--reset">
+                        <li class="burger_item"><a class="header_nav_link" href="#">О компании</a></li>
+                        <li class="burger_item"><a class="header_nav_link" href="#">Каталог</a></li>
+                        <li class="burger_item"><a class="header_nav_link" href="#">Индивидуальный пошив</a></li>
+                        <li class="burger_item"><a class="header_nav_link" href="#">SALE</a></li>
+                        <li class="burger_item"><a class="header_nav_link" href="#">FAQ</a></li>
+                        <li class="burger_item"><a class="header_nav_link" href="#">Подарочный сертификат</a></li>
+                        <li class="burger_item"><a class="header_nav_link" href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header_logo_wrapper">
+                    <a class="header_logo_link" href="#">
+                        <img src="img/main_page/shiw_logo.png" alt="logo.png">
+                    </a>
+                </div>
+                <div class="header_socials_wrapper">
+                    <a class="social_link" href="">
+                        <svg class="telegram" width="34" height="34" viewBox="0 0 34 34" fill="none"
+                            xmlns="http://www.w3.org/2000/svg ">
+                            <path
+                                d="M17 0C7.61175 0 0 7.61175 0 17C0 26.3882 7.61175 34 17 34C26.3882 34 34 26.3882 34 17C34 7.61175 26.3882 0 17 0ZM25.3498 11.6464L22.559 24.7931C22.3536 25.7252 21.7983 25.9519 21.0233 25.5128L16.7733 22.3819L14.7248 24.3568C14.5265 24.6117 14.2191 24.7747 13.8748 24.7747C13.872 24.7747 13.8706 24.7747 13.8677 24.7747L14.1695 20.4482L22.0462 13.3337C22.3862 13.0319 21.9697 12.8605 21.5177 13.1623L11.7867 19.2907L7.59333 17.9817C6.68667 17.6942 6.66117 17.0751 7.78458 16.6303L24.1698 10.3147C24.9319 10.0371 25.5949 10.4961 25.3484 11.6478L25.3498 11.6464Z"
+                                fill="#2B2B2B" />
+                        </svg>
+                    </a>
+                    <a class="social_link" href="">
+                        <svg class="whatsapp" width="34" height="34" viewBox="0 0 34 34" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17.0043 0H16.9958C7.62239 0 2.2306e-05 7.62449 2.2306e-05 17C-0.00579828 20.5806 1.12765 24.0703 3.2364 26.9641L1.11777 33.2796L7.65214 31.1907C10.4239 33.0296 13.6779 34.0071 17.0043 34C26.3776 34 34 26.3733 34 17C34 7.62662 26.3776 0 17.0043 0ZM26.8961 24.0061C26.486 25.1642 24.8583 26.1247 23.5599 26.4052C22.6716 26.5943 21.5114 26.7452 17.6056 25.126C12.6098 23.0562 9.39252 17.9796 9.14177 17.6502C8.90164 17.3209 7.12302 14.9621 7.12302 12.5226C7.12302 10.0831 8.36189 8.89524 8.86127 8.38524C9.27139 7.96662 9.94927 7.77537 10.5995 7.77537C10.8099 7.77537 10.999 7.78599 11.169 7.79449C11.6684 7.81574 11.9191 7.84549 12.2485 8.63386C12.6586 9.62199 13.6574 12.0615 13.7764 12.3122C13.8975 12.563 14.0186 12.903 13.8486 13.2324C13.6893 13.5724 13.549 13.7232 13.2983 14.0122C13.0475 14.3012 12.8095 14.5222 12.5588 14.8325C12.3293 15.1024 12.07 15.3914 12.359 15.8907C12.648 16.3795 13.6468 18.0094 15.1173 19.3183C17.0149 21.0077 18.5534 21.5475 19.1038 21.777C19.5139 21.947 20.0026 21.9066 20.3023 21.5878C20.6826 21.1777 21.1523 20.4977 21.6304 19.8284C21.9704 19.3481 22.3996 19.2886 22.8501 19.4586C23.3091 19.618 25.738 20.8186 26.2374 21.0672C26.7368 21.318 27.0661 21.437 27.1873 21.6473C27.3063 21.8577 27.3063 22.8458 26.8961 24.0061Z"
+                                fill="#2B2B2B" />
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <section class="catalog">
+        <div class="catalog_container container">
+            <div class="catalog_content_top">
+                <div class="catalog_navigation_wrapper">
+                    <div class="catalog_nabvbar">
+                        <div class="catalog_main_menu active">Тренировочная одежда</div>
+                        <div class="catalog_sub_menu active">
+                            <a class="catalog_sub_link" href="#">Латина/женская линия</a>
+                            <a class="catalog_sub_link" href="#">Латина/мужская линия</a>
+                            <a class="catalog_sub_link" href="#">Стандарт/женская линия</a>
+                            <a class="catalog_sub_link" href="#">Стандарт/мужская линия</a>
+                            <a class="catalog_sub_link" href="#">Танго</a>
+                            <a class="catalog_sub_link" href="#">Sale</a>
+                        </div>
+                        <div class="catalog_main_menu">Турнирная одежда</div>
+                        <div class="catalog_sub_menu">
+                            <a class="catalog_sub_link" href="#">Латина/женская линия</a>
+                            <a class="catalog_sub_link" href="#">Латина/мужская линия</a>
+                            <a class="catalog_sub_link" href="#">Sale</a>
+                        </div>
+                        <div class="catalog_main_menu">Теннисная одежда</div>
+                        <div class="catalog_sub_menu">
+                            <a class="catalog_sub_link" href="#">Основная коллекция</a>
+                            <a class="catalog_sub_link" href="#">Sale</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog_right_image">
+                    <img class="catalog_sub_image" src="img/catalog_page/catalog_sub_img.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="catalog_main">
+        <div class="container">
+            <div class="catalog_content_bottom">
+                <ul class="catalog_cards_list list--reset">
+                    <li class="catalog_card">
+                        <a class="catalog_card_open_link" href="">
+                            <div class="catalog_card_content">
+                                <img class="catalog_card_img" src="img/catalog_page/DSC_7248.png" alt="">
+                                <h4 class="catalog_card_name">Платье красивое</h4>
+                                <p class="catalog_card_price">6000 ₽</p>
+                            </div>
+
+                        </a>
+                    </li>
+                    <li class="catalog_card">
+                        <a class="catalog_card_open_link" href="">
+                            <div class="catalog_card_content">
+                                <img class="catalog_card_img" src="img/catalog_page/DSC_7248.png" alt="">
+                                <h4 class="catalog_card_name">Платье красивое</h4>
+                                <p class="catalog_card_price">6000 ₽</p>
+                            </div>
+
+                        </a>
+                    </li>
+                    <li class="catalog_card">
+                        <a class="catalog_card_open_link" href="">
+                            <div class="catalog_card_content">
+                                <img class="catalog_card_img" src="img/catalog_page/DSC_7248.png" alt="">
+                                <h4 class="catalog_card_name">Платье красивое</h4>
+                                <p class="catalog_card_price">6000 ₽</p>
+                            </div>
+
+                        </a>
+                    </li>
+                    <li class="catalog_card">
+                        <a class="catalog_card_open_link" href="">
+                            <div class="catalog_card_content">
+                                <img class="catalog_card_img" src="img/catalog_page/DSC_7248.png" alt="">
+                                <h4 class="catalog_card_name">Платье красивое</h4>
+                                <p class="catalog_card_price">6000 ₽</p>
+                            </div>
+
+                        </a>
+                    </li>
+                    <li class="catalog_card">
+                        <a class="catalog_card_open_link" href="">
+                            <div class="catalog_card_content">
+                                <img class="catalog_card_img" src="img/catalog_page/DSC_7248.png" alt="">
+                                <h4 class="catalog_card_name">Платье красивое</h4>
+                                <p class="catalog_card_price">6000 ₽</p>
+                            </div>
+
+                        </a>
+                    </li>
+                    <li class="catalog_card">
+                        <a class="catalog_card_open_link" href="">
+                            <div class="catalog_card_content">
+                                <img class="catalog_card_img" src="img/catalog_page/DSC_7248.png" alt="">
+                                <h4 class="catalog_card_name">Платье красивое</h4>
+                                <p class="catalog_card_price">6000 ₽</p>
+                            </div>
+
+                        </a>
+                    </li>
+                    <li class="catalog_card">
+                        <a class="catalog_card_open_link" href="">
+                            <div class="catalog_card_content">
+                                <img class="catalog_card_img" src="img/catalog_page/DSC_7248.png" alt="">
+                                <h4 class="catalog_card_name">Платье красивое</h4>
+                                <p class="catalog_card_price">6000 ₽</p>
+                            </div>
+
+                        </a>
+                    </li>
+                    <li class="catalog_card">
+                        <a class="catalog_card_open_link" href="">
+                            <div class="catalog_card_content">
+                                <img class="catalog_card_img" src="img/catalog_page/DSC_7248.png" alt="">
+                                <h4 class="catalog_card_name">Платье красивое</h4>
+                                <p class="catalog_card_price">6000 ₽</p>
+                            </div>
+
+                        </a>
+                    </li>
+                    <li class="catalog_card">
+                        <a class="catalog_card_open_link" href="">
+                            <div class="catalog_card_content">
+                                <img class="catalog_card_img" src="img/catalog_page/DSC_7248.png" alt="">
+                                <h4 class="catalog_card_name">Платье красивое</h4>
+                                <p class="catalog_card_price">6000 ₽</p>
+                            </div>
+
+                        </a>
+                    </li>
+                    <li class="catalog_card">
+                        <a class="catalog_card_open_link" href="">
+                            <div class="catalog_card_content">
+                                <img class="catalog_card_img" src="img/catalog_page/DSC_7248.png" alt="">
+                                <h4 class="catalog_card_name">Платье красивое</h4>
+                                <p class="catalog_card_price">6000 ₽</p>
+                            </div>
+
+                        </a>
+                    </li>
+                    <li class="catalog_card">
+                        <a class="catalog_card_open_link" href="">
+                            <div class="catalog_card_content">
+                                <img class="catalog_card_img" src="img/catalog_page/DSC_7248.png" alt="">
+                                <h4 class="catalog_card_name">Платье красивое</h4>
+                                <p class="catalog_card_price">6000 ₽</p>
+                            </div>
+
+                        </a>
+                    </li>
+                    <li class="catalog_card">
+                        <a class="catalog_card_open_link" href="">
+                            <div class="catalog_card_content">
+                                <img class="catalog_card_img" src="img/catalog_page/DSC_7248.png" alt="">
+                                <h4 class="catalog_card_name">Платье красивое</h4>
+                                <p class="catalog_card_price">6000 ₽</p>
+                            </div>
+
+                        </a>
+                    </li>
+                </ul>
+                <div class="catalog_pagination_wrapper">
+                    <a class="catalog_pagination_left" href="">
+                        <svg class="arrow_left_pag" xmlns="http://www.w3.org/2000/svg" width="22" height="8" viewBox="0 0 22 8" fill="none">
+                            <path d="M0.646447 3.64645C0.451184 3.84171 0.451184 4.15829 0.646447 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659729 4.53553 0.464467C4.34027 0.269204 4.02369 0.269204 3.82843 0.464467L0.646447 3.64645ZM21 4.5C21.2761 4.5 21.5 4.27615 21.5 4C21.5 3.72386 21.2761 3.5 21 3.5L21 4.5ZM1 4.5L21 4.5L21 3.5L1 3.5L1 4.5Z" fill="#B5B5B5"/>
+                            </svg>
+                    </a>
+                    <p class="catalog_pagination_page">1</p>
+                    <a class="catalog_pagination_right" href="">
+                        <svg class="arrow_right_pag" xmlns="http://www.w3.org/2000/svg" width="22" height="8" viewBox="0 0 22 8" fill="none">
+                            <path d="M21.3536 4.35355C21.5488 4.15829 21.5488 3.84171 21.3536 3.64645L18.1716 0.464466C17.9763 0.269204 17.6597 0.269204 17.4645 0.464466C17.2692 0.659728 17.2692 0.976311 17.4645 1.17157L20.2929 4L17.4645 6.82843C17.2692 7.02369 17.2692 7.34027 17.4645 7.53553C17.6597 7.7308 17.9763 7.7308 18.1716 7.53553L21.3536 4.35355ZM1 3.5C0.723858 3.5 0.5 3.72386 0.5 4C0.5 4.27614 0.723858 4.5 1 4.5V3.5ZM21 3.5L1 3.5V4.5L21 4.5V3.5Z" fill="#B5B5B5"/>
+                            </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer_container container">
+            <div class="footer_content">
+                <div class="footer_left">
+                    <div class="footer_left_top">
+                        <a class="footer_contract" href="">Договор оферты</a>
+                        <p class="footer_year">© 2024, SHIW</p>
+                    </div>
+                    <a class="footer_left_bottom_link footer_left_bottom" href="https://t.me/Stasya_Poznyak">Powered by D&S studio</a>
+                </div>
+                <div class="footer_middle">
+                    <ul class="footer_nav_list list--reset">
+                        <li class="burger_item"><a class="footer_nav_link" href="#">О компании</a></li>
+                        <li class="burger_item"><a class="footer_nav_link" href="#">Каталог</a></li>
+                        <li class="burger_item"><a class="footer_nav_link" href="#">Индивидуальный пошив</a></li>
+                        <li class="burger_item"><a class="footer_nav_link" href="#">SALE</a></li>
+                        <li class="burger_item"><a class="footer_nav_link" href="#">FAQ</a></li>
+                        <li class="burger_item"><a class="footer_nav_link" href="#">Подарочный сертификат</a></li>
+                        <li class="burger_item"><a class="footer_nav_link" href="#">Контакты</a></li>
+                    </ul>
+
+                </div>
+                <div class="footer_right">
+                    <a class="footer_link_tel" href="tel:+79200188887">+79200188887</a>
+                    <div class="footer_social_wrapper">
+                        <a class="social_link" href="">
+                            <svg class="telegram" width="34" height="34" viewBox="0 0 34 34" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17 0C7.61175 0 0 7.61175 0 17C0 26.3882 7.61175 34 17 34C26.3882 34 34 26.3882 34 17C34 7.61175 26.3882 0 17 0ZM25.3498 11.6464L22.559 24.7931C22.3536 25.7252 21.7983 25.9519 21.0233 25.5128L16.7733 22.3819L14.7248 24.3568C14.5265 24.6117 14.2191 24.7747 13.8748 24.7747C13.872 24.7747 13.8706 24.7747 13.8677 24.7747L14.1695 20.4482L22.0462 13.3337C22.3862 13.0319 21.9697 12.8605 21.5177 13.1623L11.7867 19.2907L7.59333 17.9817C6.68667 17.6942 6.66117 17.0751 7.78458 16.6303L24.1698 10.3147C24.9319 10.0371 25.5949 10.4961 25.3484 11.6478L25.3498 11.6464Z"
+                                    fill="#F8F8F8" />
+                            </svg>
+                        </a>
+                        <a class="social_link" href="">
+                            <svg class="whatsapp" width="34" height="34" viewBox="0 0 34 34" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.0043 0H16.9958C7.62239 0 2.2306e-05 7.62449 2.2306e-05 17C-0.00579828 20.5806 1.12765 24.0703 3.2364 26.9641L1.11777 33.2796L7.65214 31.1907C10.4239 33.0296 13.6779 34.0071 17.0043 34C26.3776 34 34 26.3733 34 17C34 7.62662 26.3776 0 17.0043 0ZM26.8961 24.0061C26.486 25.1642 24.8583 26.1247 23.5599 26.4052C22.6716 26.5943 21.5114 26.7452 17.6056 25.126C12.6098 23.0562 9.39252 17.9796 9.14177 17.6502C8.90164 17.3209 7.12302 14.9621 7.12302 12.5226C7.12302 10.0831 8.36189 8.89524 8.86127 8.38524C9.27139 7.96662 9.94927 7.77537 10.5995 7.77537C10.8099 7.77537 10.999 7.78599 11.169 7.79449C11.6684 7.81574 11.9191 7.84549 12.2485 8.63386C12.6586 9.62199 13.6574 12.0615 13.7764 12.3122C13.8975 12.563 14.0186 12.903 13.8486 13.2324C13.6893 13.5724 13.549 13.7232 13.2983 14.0122C13.0475 14.3012 12.8095 14.5222 12.5588 14.8325C12.3293 15.1024 12.07 15.3914 12.359 15.8907C12.648 16.3795 13.6468 18.0094 15.1173 19.3183C17.0149 21.0077 18.5534 21.5475 19.1038 21.777C19.5139 21.947 20.0026 21.9066 20.3023 21.5878C20.6826 21.1777 21.1523 20.4977 21.6304 19.8284C21.9704 19.3481 22.3996 19.2886 22.8501 19.4586C23.3091 19.618 25.738 20.8186 26.2374 21.0672C26.7368 21.318 27.0661 21.437 27.1873 21.6473C27.3063 21.8577 27.3063 22.8458 26.8961 24.0061Z"
+                                    fill="#F8F8F8" />
+                            </svg>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+<script defer type="module" src="../deps/js/main.js"></script>
+<script defer type="module" src="../deps/js/catalog.js"></script>
+
+
+</html>

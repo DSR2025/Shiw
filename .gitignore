@@ -47,3 +47,5 @@ media/
 # Секретные ключи и настройки
 settings_local.py
 config.json
+
+.env
