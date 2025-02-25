@@ -2,3 +2,48 @@
 .DS_Store
 node_modules/
 Thumbs.db
+
+# Файлы и каталоги, создаваемые Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Файлы конфигурации среды
+.env
+*.env
+
+# Логи и отладочные файлы
+*.log
+logs/
+debug.log
+
+# База данных SQLite
+db.sqlite3
+db.sqlite3-journal
+
+# Кеши и временные файлы
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
+
+# Файлы виртуального окружения
+venv/
+env/
+ENV/
+*.venv
+
+# Файлы IDE и редакторов кода
+.vscode/
+.idea/
+*.iml
+
+# Файлы статических и медиафайлов Django
+staticfiles/
+media/
+
+# Секретные ключи и настройки
+settings_local.py
+config.json
