@@ -437,7 +437,7 @@
                     <p class="contacts_adress second">Пн-Пт с 9.00 до 20.00</p>
 
                     <div class="map_wrapper">
-                        <div class="map_w" id="map"></div>
+                        <div class="map" id="map"></div>
                     </div>
     
                 </div>
@@ -498,7 +498,10 @@
 
 
 </body>
+
 <script defer type="module" src="{% static 'deps/js/main.js' %}"></script>
+<script defer type="module" src="{% static 'deps/js/scroll.js' %}"></script>
 <script src="https://unpkg.com/scrollreveal"></script>
-<script src="https://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU" type="text/javascript"></script>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=ВАШ_API_КЛЮЧ&lang=ru_RU" type="text/javascript"></script>
+<script defer type="module" src="{% static 'deps/js/map.js' %}"></script>
 </html>

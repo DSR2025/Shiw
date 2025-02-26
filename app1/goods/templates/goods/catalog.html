@@ -1,3 +1,5 @@
+{% load static %}
+ 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,9 +7,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shiw</title>
-    <link rel="stylesheet" href="css/normilize.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/catalog.css">
+    <link rel="stylesheet" href="{% static "deps/css/normilize.css" %}">
+    <link rel="stylesheet" href="{% static "deps/css/styles.css" %}">
+    <link rel="stylesheet" href="{% static "deps/css/catalog.css" %}">
 </head>
 
 <body>
@@ -45,7 +47,7 @@
                 </nav>
                 <div class="header_logo_wrapper">
                     <a class="header_logo_link" href="#">
-                        <img src="img/main_page/shiw_logo.png" alt="logo.png">
+                        <img src="{% static "deps/img/main_page/shiw_logo.png" %}" alt="logo.png">
                     </a>
                 </div>
                 <div class="header_socials_wrapper">
@@ -74,31 +76,35 @@
         <div class="catalog_container container">
             <div class="catalog_content_top">
                 <div class="catalog_navigation_wrapper">
-                    <div class="catalog_nabvbar">
-                        <div class="catalog_main_menu active">Тренировочная одежда</div>
-                        <div class="catalog_sub_menu active">
-                            <a class="catalog_sub_link" href="#">Латина/женская линия</a>
-                            <a class="catalog_sub_link" href="#">Латина/мужская линия</a>
-                            <a class="catalog_sub_link" href="#">Стандарт/женская линия</a>
-                            <a class="catalog_sub_link" href="#">Стандарт/мужская линия</a>
-                            <a class="catalog_sub_link" href="#">Танго</a>
-                            <a class="catalog_sub_link" href="#">Sale</a>
-                        </div>
-                        <div class="catalog_main_menu">Турнирная одежда</div>
-                        <div class="catalog_sub_menu">
-                            <a class="catalog_sub_link" href="#">Латина/женская линия</a>
-                            <a class="catalog_sub_link" href="#">Латина/мужская линия</a>
-                            <a class="catalog_sub_link" href="#">Sale</a>
-                        </div>
-                        <div class="catalog_main_menu">Теннисная одежда</div>
-                        <div class="catalog_sub_menu">
-                            <a class="catalog_sub_link" href="#">Основная коллекция</a>
-                            <a class="catalog_sub_link" href="#">Sale</a>
-                        </div>
+                    <div class="catalog_navbar">
+                        {% for category in categories %}
+                            {% if not category.parent %} 
+                                <div class="catalog_main_menu {% if current_category and current_category.parent == category %}active{% endif %}" data-category-id="{{ category.id }}">
+                                    {{ category.name }}
+                                </div>
+                                <div class="catalog_sub_menu {% if current_category and current_category.parent == category %}active{% endif %}" data-category-id="{{ category.id }}">
+                                    {% for subcategory in category.get_children %}
+                                        <a class="catalog_sub_link {% if current_category and current_category.slug == subcategory.slug %}active{% endif %}" href="{% url 'catalog:index' subcategory.slug %}" data-target="{{ subcategory.slug }}">
+                                            {{ subcategory.name }}
+                                        </a>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        {% endfor %}
                     </div>
                 </div>
-                <div class="catalog_right_image">
-                    <img class="catalog_sub_image" src="img/catalog_page/catalog_sub_img.png" alt="">
+                <div class="catalog_right_image" id="catalog_right_image">
+                    <img class="catalog_sub_image" data-target="tennis-sale" src="{% static 'deps/img/catalog_page/sale.jpg' %}" alt="Tennis Sale">
+                    <img class="catalog_sub_image" data-target="tournir-sale" src="{% static 'deps/img/catalog_page/sale.jpg' %}" alt="Tournir Sale">
+                    <img class="catalog_sub_image" data-target="training-sale" src="{% static 'deps/img/catalog_page/sale.jpg' %}" alt="Training Sale">
+                    <img class="catalog_sub_image" data-target="tennis-main-collection" src="{% static 'deps/img/catalog_page/tennis-main-collection.jpg' %}" alt="Tennis Main Collection">
+                    <img class="catalog_sub_image" data-target="tournir-latina-male" src="{% static 'deps/img/catalog_page/tournir-latina-male.jpg' %}" alt="Tournir Latina Male">
+                    <img class="catalog_sub_image" data-target="tournir-latina-female" src="{% static 'deps/img/catalog_page/tournir-latina-female.jpg' %}" alt="Tournir Latina Female">
+                    <img class="catalog_sub_image" data-target="tango" src="{% static 'deps/img/catalog_page/tango.jpg' %}" alt="Tango">
+                    <img class="catalog_sub_image" data-target="training-standart-male-collection" src="{% static 'deps/img/catalog_page/training-standart-male-collection.jpg' %}" alt="Training Standart Male Collection">
+                    <img class="catalog_sub_image" data-target="training-standart-female-collection" src="{% static 'deps/img/catalog_page/training-standart-female-collection.jpg' %}" alt="Training Standart Female Collection">
+                    <img class="catalog_sub_image" data-target="training-latina-male-collection" src="{% static 'deps/img/catalog_page/training-latina-male-collection.jpg' %}" alt="Training Latina Male Collection">
+                    <img class="catalog_sub_image" data-target="training-latina-female-collection" src="{% static 'deps/img/catalog_page/training-latina-female-collection.jpg' %}" alt="Training Latina Female Collection">
                 </div>
             </div>
         </div>
@@ -107,139 +113,58 @@
         <div class="container">
             <div class="catalog_content_bottom">
                 <ul class="catalog_cards_list list--reset">
+                    {% for product in goods %}
                     <li class="catalog_card">
-                        <a class="catalog_card_open_link" href="">
+                        <a class="catalog_card_open_link" href="{% url 'catalog:product' product.slug %}">
                             <div class="catalog_card_content">
-                                <img class="catalog_card_img" src="img/catalog_page/DSC_7248.png" alt="">
-                                <h4 class="catalog_card_name">Платье красивое</h4>
-                                <p class="catalog_card_price">6000 ₽</p>
+                                {% if product.images.all %}
+                                    <img class="catalog_card_img" src="{{ product.images.first.image.url }}" alt="{{ product.name }}">
+                                {% else %}
+                                    <img src="{% static 'deps/img/main_page/shiw_logo.png' %}" alt="Изображение отсутствует">
+                                {% endif %}
+                                <h4 class="catalog_card_name">{{ product.name }}</h4>
+                                <p class="catalog_card_price">
+                                    {% if product.show_from %} 
+                                        от {{ product.price }} ₽
+                                    {% else %}
+                                        {{ product.price }} ₽
+                                    {% endif %}
+                                </p>
                             </div>
-
                         </a>
                     </li>
-                    <li class="catalog_card">
-                        <a class="catalog_card_open_link" href="">
-                            <div class="catalog_card_content">
-                                <img class="catalog_card_img" src="img/catalog_page/DSC_7248.png" alt="">
-                                <h4 class="catalog_card_name">Платье красивое</h4>
-                                <p class="catalog_card_price">6000 ₽</p>
-                            </div>
-
-                        </a>
-                    </li>
-                    <li class="catalog_card">
-                        <a class="catalog_card_open_link" href="">
-                            <div class="catalog_card_content">
-                                <img class="catalog_card_img" src="img/catalog_page/DSC_7248.png" alt="">
-                                <h4 class="catalog_card_name">Платье красивое</h4>
-                                <p class="catalog_card_price">6000 ₽</p>
-                            </div>
-
-                        </a>
-                    </li>
-                    <li class="catalog_card">
-                        <a class="catalog_card_open_link" href="">
-                            <div class="catalog_card_content">
-                                <img class="catalog_card_img" src="img/catalog_page/DSC_7248.png" alt="">
-                                <h4 class="catalog_card_name">Платье красивое</h4>
-                                <p class="catalog_card_price">6000 ₽</p>
-                            </div>
-
-                        </a>
-                    </li>
-                    <li class="catalog_card">
-                        <a class="catalog_card_open_link" href="">
-                            <div class="catalog_card_content">
-                                <img class="catalog_card_img" src="img/catalog_page/DSC_7248.png" alt="">
-                                <h4 class="catalog_card_name">Платье красивое</h4>
-                                <p class="catalog_card_price">6000 ₽</p>
-                            </div>
-
-                        </a>
-                    </li>
-                    <li class="catalog_card">
-                        <a class="catalog_card_open_link" href="">
-                            <div class="catalog_card_content">
-                                <img class="catalog_card_img" src="img/catalog_page/DSC_7248.png" alt="">
-                                <h4 class="catalog_card_name">Платье красивое</h4>
-                                <p class="catalog_card_price">6000 ₽</p>
-                            </div>
-
-                        </a>
-                    </li>
-                    <li class="catalog_card">
-                        <a class="catalog_card_open_link" href="">
-                            <div class="catalog_card_content">
-                                <img class="catalog_card_img" src="img/catalog_page/DSC_7248.png" alt="">
-                                <h4 class="catalog_card_name">Платье красивое</h4>
-                                <p class="catalog_card_price">6000 ₽</p>
-                            </div>
-
-                        </a>
-                    </li>
-                    <li class="catalog_card">
-                        <a class="catalog_card_open_link" href="">
-                            <div class="catalog_card_content">
-                                <img class="catalog_card_img" src="img/catalog_page/DSC_7248.png" alt="">
-                                <h4 class="catalog_card_name">Платье красивое</h4>
-                                <p class="catalog_card_price">6000 ₽</p>
-                            </div>
-
-                        </a>
-                    </li>
-                    <li class="catalog_card">
-                        <a class="catalog_card_open_link" href="">
-                            <div class="catalog_card_content">
-                                <img class="catalog_card_img" src="img/catalog_page/DSC_7248.png" alt="">
-                                <h4 class="catalog_card_name">Платье красивое</h4>
-                                <p class="catalog_card_price">6000 ₽</p>
-                            </div>
-
-                        </a>
-                    </li>
-                    <li class="catalog_card">
-                        <a class="catalog_card_open_link" href="">
-                            <div class="catalog_card_content">
-                                <img class="catalog_card_img" src="img/catalog_page/DSC_7248.png" alt="">
-                                <h4 class="catalog_card_name">Платье красивое</h4>
-                                <p class="catalog_card_price">6000 ₽</p>
-                            </div>
-
-                        </a>
-                    </li>
-                    <li class="catalog_card">
-                        <a class="catalog_card_open_link" href="">
-                            <div class="catalog_card_content">
-                                <img class="catalog_card_img" src="img/catalog_page/DSC_7248.png" alt="">
-                                <h4 class="catalog_card_name">Платье красивое</h4>
-                                <p class="catalog_card_price">6000 ₽</p>
-                            </div>
-
-                        </a>
-                    </li>
-                    <li class="catalog_card">
-                        <a class="catalog_card_open_link" href="">
-                            <div class="catalog_card_content">
-                                <img class="catalog_card_img" src="img/catalog_page/DSC_7248.png" alt="">
-                                <h4 class="catalog_card_name">Платье красивое</h4>
-                                <p class="catalog_card_price">6000 ₽</p>
-                            </div>
-
-                        </a>
-                    </li>
+                    {% endfor %}
                 </ul>
                 <div class="catalog_pagination_wrapper">
-                    <a class="catalog_pagination_left" href="">
-                        <svg class="arrow_left_pag" xmlns="http://www.w3.org/2000/svg" width="22" height="8" viewBox="0 0 22 8" fill="none">
-                            <path d="M0.646447 3.64645C0.451184 3.84171 0.451184 4.15829 0.646447 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659729 4.53553 0.464467C4.34027 0.269204 4.02369 0.269204 3.82843 0.464467L0.646447 3.64645ZM21 4.5C21.2761 4.5 21.5 4.27615 21.5 4C21.5 3.72386 21.2761 3.5 21 3.5L21 4.5ZM1 4.5L21 4.5L21 3.5L1 3.5L1 4.5Z" fill="#B5B5B5"/>
+                    {% if goods.has_previous %}
+                        <a class="catalog_pagination_left active" href="?page={{ goods.previous_page_number }}">
+                            <svg class="arrow_left_pag" xmlns="http://www.w3.org/2000/svg" width="22" height="8" viewBox="0 0 22 8" fill="none">
+                                <path d="M0.646447 3.64645C0.451184 3.84171 0.451184 4.15829 0.646447 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659729 4.53553 0.464467C4.34027 0.269204 4.02369 0.269204 3.82843 0.464467L0.646447 3.64645ZM21 4.5C21.2761 4.5 21.5 4.27615 21.5 4C21.5 3.72386 21.2761 3.5 21 3.5L21 4.5ZM1 4.5L21 4.5L21 3.5L1 3.5L1 4.5Z" fill="#2B2B2B"/>
                             </svg>
-                    </a>
-                    <p class="catalog_pagination_page">1</p>
-                    <a class="catalog_pagination_right" href="">
-                        <svg class="arrow_right_pag" xmlns="http://www.w3.org/2000/svg" width="22" height="8" viewBox="0 0 22 8" fill="none">
-                            <path d="M21.3536 4.35355C21.5488 4.15829 21.5488 3.84171 21.3536 3.64645L18.1716 0.464466C17.9763 0.269204 17.6597 0.269204 17.4645 0.464466C17.2692 0.659728 17.2692 0.976311 17.4645 1.17157L20.2929 4L17.4645 6.82843C17.2692 7.02369 17.2692 7.34027 17.4645 7.53553C17.6597 7.7308 17.9763 7.7308 18.1716 7.53553L21.3536 4.35355ZM1 3.5C0.723858 3.5 0.5 3.72386 0.5 4C0.5 4.27614 0.723858 4.5 1 4.5V3.5ZM21 3.5L1 3.5V4.5L21 4.5V3.5Z" fill="#B5B5B5"/>
+                        </a>
+                    {% else %}
+                        <span class="catalog_pagination_left inactive">
+                            <svg class="arrow_left_pag" xmlns="http://www.w3.org/2000/svg" width="22" height="8" viewBox="0 0 22 8" fill="none">
+                                <path d="M0.646447 3.64645C0.451184 3.84171 0.451184 4.15829 0.646447 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659729 4.53553 0.464467C4.34027 0.269204 4.02369 0.269204 3.82843 0.464467L0.646447 3.64645ZM21 4.5C21.2761 4.5 21.5 4.27615 21.5 4C21.5 3.72386 21.2761 3.5 21 3.5L21 4.5ZM1 4.5L21 4.5L21 3.5L1 3.5L1 4.5Z" fill="#B5B5B5"/>
                             </svg>
-                    </a>
+                        </span>
+                    {% endif %}
+                
+                    <p class="catalog_pagination_page">{{ goods.number }}/{{ goods.paginator.num_pages }}</p>
+                
+                    {% if goods.has_next %}
+                        <a class="catalog_pagination_right active" href="?page={{ goods.next_page_number }}">
+                            <svg class="arrow_right_pag" xmlns="http://www.w3.org/2000/svg" width="22" height="8" viewBox="0 0 22 8" fill="none">
+                                <path d="M21.3536 4.35355C21.5488 4.15829 21.5488 3.84171 21.3536 3.64645L18.1716 0.464466C17.9763 0.269204 17.6597 0.269204 17.4645 0.464466C17.2692 0.659728 17.2692 0.976311 17.4645 1.17157L20.2929 4L17.4645 6.82843C17.2692 7.02369 17.2692 7.34027 17.4645 7.53553C17.6597 7.7308 17.9763 7.7308 18.1716 7.53553L21.3536 4.35355ZM1 3.5C0.723858 3.5 0.5 3.72386 0.5 4C0.5 4.27614 0.723858 4.5 1 4.5V3.5ZM21 3.5L1 3.5V4.5L21 4.5V3.5Z" fill="#2B2B2B"/>
+                            </svg>
+                        </a>
+                    {% else %}
+                        <span class="catalog_pagination_right inactive">
+                            <svg class="arrow_right_pag" xmlns="http://www.w3.org/2000/svg" width="22" height="8" viewBox="0 0 22 8" fill="none">
+                                <path d="M21.3536 4.35355C21.5488 4.15829 21.5488 3.84171 21.3536 3.64645L18.1716 0.464466C17.9763 0.269204 17.6597 0.269204 17.4645 0.464466C17.2692 0.659728 17.2692 0.976311 17.4645 1.17157L20.2929 4L17.4645 6.82843C17.2692 7.02369 17.2692 7.34027 17.4645 7.53553C17.6597 7.7308 17.9763 7.7308 18.1716 7.53553L21.3536 4.35355ZM1 3.5C0.723858 3.5 0.5 3.72386 0.5 4C0.5 4.27614 0.723858 4.5 1 4.5V3.5ZM21 3.5L1 3.5V4.5L21 4.5V3.5Z" fill="#B5B5B5"/>
+                            </svg>
+                        </span>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -295,8 +220,8 @@
 
 
 </body>
-<script defer type="module" src="../deps/js/main.js"></script>
-<script defer type="module" src="../deps/js/catalog.js"></script>
+<script defer type="module" src="{% static "deps/js/main.js" %}"></script>
+<script defer type="module" src="{% static "deps/js/catalog.js" %}"></script>
 
 
 </html>

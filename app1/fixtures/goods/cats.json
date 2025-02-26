@@ -1,0 +1,198 @@
+[
+    {
+        "model": "goods.categories",
+        "pk": 1,
+        "fields": {
+            "name": "Тренировочная одежда",
+            "slug": "training-clothing",
+            "parent": null,
+            "order": 1,
+            "lft": 1,
+            "rght": 14,
+            "tree_id": 1,
+            "level": 0
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 2,
+        "fields": {
+            "name": "Латина/женская линия",
+            "slug": "training-latina-female-collection",
+            "parent": 1,
+            "order": 2,
+            "lft": 2,
+            "rght": 3,
+            "tree_id": 1,
+            "level": 1
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 3,
+        "fields": {
+            "name": "Латина/мужская линия",
+            "slug": "training-latina-male-collection",
+            "parent": 1,
+            "order": 3,
+            "lft": 4,
+            "rght": 5,
+            "tree_id": 1,
+            "level": 1
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 4,
+        "fields": {
+            "name": "Стандарт/женская линия",
+            "slug": "training-standart-female-collection",
+            "parent": 1,
+            "order": 4,
+            "lft": 6,
+            "rght": 7,
+            "tree_id": 1,
+            "level": 1
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 5,
+        "fields": {
+            "name": "Стандарт/мужская линия",
+            "slug": "training-standart-male-collection",
+            "parent": 1,
+            "order": 5,
+            "lft": 8,
+            "rght": 9,
+            "tree_id": 1,
+            "level": 1
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 6,
+        "fields": {
+            "name": "Танго",
+            "slug": "tango",
+            "parent": 1,
+            "order": 6,
+            "lft": 10,
+            "rght": 11,
+            "tree_id": 1,
+            "level": 1
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 7,
+        "fields": {
+            "name": "Sale",
+            "slug": "training-sale",
+            "parent": 1,
+            "order": 7,
+            "lft": 12,
+            "rght": 13,
+            "tree_id": 1,
+            "level": 1
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 8,
+        "fields": {
+            "name": "Турнирная одежда",
+            "slug": "tournir-clothing",
+            "parent": null,
+            "order": 8,
+            "lft": 1,
+            "rght": 8,
+            "tree_id": 4,
+            "level": 0
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 9,
+        "fields": {
+            "name": "Латина/женская линия",
+            "slug": "tournir-latina-female",
+            "parent": 8,
+            "order": 9,
+            "lft": 2,
+            "rght": 3,
+            "tree_id": 4,
+            "level": 1
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 10,
+        "fields": {
+            "name": "Латина/мужская линия",
+            "slug": "tournir-latina-male",
+            "parent": 8,
+            "order": 10,
+            "lft": 4,
+            "rght": 5,
+            "tree_id": 4,
+            "level": 1
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 11,
+        "fields": {
+            "name": "Sale",
+            "slug": "tournir-sale",
+            "parent": 8,
+            "order": 11,
+            "lft": 6,
+            "rght": 7,
+            "tree_id": 4,
+            "level": 1
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 12,
+        "fields": {
+            "name": "Теннисная одежда",
+            "slug": "tennis-clothing",
+            "parent": null,
+            "order": 12,
+            "lft": 1,
+            "rght": 6,
+            "tree_id": 5,
+            "level": 0
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 13,
+        "fields": {
+            "name": "Основная коллекция",
+            "slug": "tennis-main-collection",
+            "parent": 12,
+            "order": 13,
+            "lft": 2,
+            "rght": 3,
+            "tree_id": 5,
+            "level": 1
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 14,
+        "fields": {
+            "name": "Sale",
+            "slug": "tennis-sale",
+            "parent": 12,
+            "order": 14,
+            "lft": 4,
+            "rght": 5,
+            "tree_id": 5,
+            "level": 1
+        }
+    }
+]
