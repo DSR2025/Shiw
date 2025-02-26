@@ -37,22 +37,22 @@
                         </a>
                     </div>
                     <ul class="burger_list list--reset">
-                        <li class="burger_item"><a class="header_nav_link" href="#">О компании</a></li>
-                        <li class="burger_item"><a class="header_nav_link" href="#">Каталог</a></li>
-                        <li class="burger_item"><a class="header_nav_link" href="#">Индивидуальный пошив</a></li>
-                        <li class="burger_item"><a class="header_nav_link" href="#">SALE</a></li>
-                        <li class="burger_item"><a class="header_nav_link" href="#">FAQ</a></li>
-                        <li class="burger_item"><a class="header_nav_link" href="#">Подарочный сертификат</a></li>
-                        <li class="burger_item"><a class="header_nav_link" href="#">Контакты</a></li>
+                        <li class="burger_item"><a class="header_nav_link" href="{% url 'main:index' %}#about">О компании</a></li>
+                        <li class="burger_item"><a class="header_nav_link" href="{% url "goods:index" category_slug='training-latina-female-collection' %}">Каталог</a></li>
+                        <li class="burger_item"><a class="header_nav_link" href="{% url 'main:index' %}#individual">Индивидуальный пошив</a></li>
+                        <li class="burger_item"><a class="header_nav_link" href="{% url 'main:index' %}#sale">SALE</a></li>
+                        <li class="burger_item"><a class="header_nav_link" href="{% url 'main:index' %}#FAQ">FAQ</a></li>
+                        <li class="burger_item"><a class="header_nav_link" href="{% url 'main:index' %}#present">Подарочный сертификат</a></li>
+                        <li class="burger_item"><a class="header_nav_link" href="{% url 'main:index' %}#contacts">Контакты</a></li>
                     </ul>
                 </nav>
                 <div class="header_logo_wrapper">
-                    <a class="header_logo_link" href="#">
+                    <a class="header_logo_link" href="{% url 'main:index' %}">
                         <img src="{% static "deps/img/main_page/shiw_logo.png" %}" alt="logo.png">
                     </a>
                 </div>
                 <div class="header_socials_wrapper">
-                    <a class="social_link" href="">
+                    <a class="social_link" href="https://t.me/ksu_shavina">
                         <svg class="telegram" width="34" height="34" viewBox="0 0 34 34" fill="none"
                             xmlns="http://www.w3.org/2000/svg ">
                             <path
@@ -60,7 +60,7 @@
                                 fill="#2B2B2B" />
                         </svg>
                     </a>
-                    <a class="social_link" href="">
+                    <a class="social_link" href="https://wa.me/79200188887">
                         <svg class="whatsapp" width="34" height="34" viewBox="0 0 34 34" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -79,7 +79,7 @@
             <div class="card_content">
                 <div class="card_left_wrapper">
                     <div class="card_back_btn_wrapper">
-                        <a class="card_btn_back" href=""><span class="card_arrow_wrapper"><svg class="card_arrow"
+                        <a class="card_btn_back" href="{% url "goods:index" category_slug='training-latina-female-collection' %}"><span class="card_arrow_wrapper"><svg class="card_arrow"
                                     xmlns="http://www.w3.org/2000/svg" width="22" height="8" viewBox="0 0 22 8"
                                     fill="none">
                                     <path
@@ -186,20 +186,20 @@
                 </div>
                 <div class="footer_middle">
                     <ul class="footer_nav_list list--reset">
-                        <li class="burger_item"><a class="footer_nav_link" href="#">О компании</a></li>
-                        <li class="burger_item"><a class="footer_nav_link" href="#">Каталог</a></li>
-                        <li class="burger_item"><a class="footer_nav_link" href="#">Индивидуальный пошив</a></li>
-                        <li class="burger_item"><a class="footer_nav_link" href="#">SALE</a></li>
-                        <li class="burger_item"><a class="footer_nav_link" href="#">FAQ</a></li>
-                        <li class="burger_item"><a class="footer_nav_link" href="#">Подарочный сертификат</a></li>
-                        <li class="burger_item"><a class="footer_nav_link" href="#">Контакты</a></li>
+                        <li class="burger_item"><a class="footer_nav_link" href="{% url 'main:index' %}#about">О компании</a></li>
+                        <li class="burger_item"><a class="footer_nav_link" href="{% url "goods:index" category_slug='training-latina-female-collection' %}">Каталог</a></li>
+                        <li class="burger_item"><a class="footer_nav_link" href="{% url 'main:index' %}#individual">Индивидуальный пошив</a></li>
+                        <li class="burger_item"><a class="footer_nav_link" href="{% url 'main:index' %}#sale">SALE</a></li>
+                        <li class="burger_item"><a class="footer_nav_link" href="{% url 'main:index' %}#FAQ">FAQ</a></li>
+                        <li class="burger_item"><a class="footer_nav_link" href="{% url 'main:index' %}#present">Подарочный сертификат</a></li>
+                        <li class="burger_item"><a class="footer_nav_link" href="{% url 'main:index' %}#contacts">Контакты</a></li>
                     </ul>
 
                 </div>
                 <div class="footer_right">
                     <a class="footer_link_tel" href="tel:+79200188887">+79200188887</a>
                     <div class="footer_social_wrapper">
-                        <a class="social_link" href="">
+                        <a class="social_link" href="https://t.me/ksu_shavina">
                             <svg class="telegram" width="34" height="34" viewBox="0 0 34 34" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -207,7 +207,7 @@
                                     fill="#F8F8F8" />
                             </svg>
                         </a>
-                        <a class="social_link" href="">
+                        <a class="social_link" href="https://wa.me/79200188887">
                             <svg class="whatsapp" width="34" height="34" viewBox="0 0 34 34" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
