@@ -9,6 +9,7 @@
     <title>Shiw</title>
     <link rel="stylesheet" href="{% static "deps/css/normilize.css"%}">
     <link rel="stylesheet" href="{% static "deps/css/styles.css"%}">
+    <link rel="stylesheet" href="{% static "deps/css/media.css"%}">
 </head>
 
 <body>
@@ -74,19 +75,26 @@
     <section class="hero_sect">
     </section>
     <section class="about">
-        <div class="about_container container">
+        <div class="container">
             <h2 class="section_title">О компании</h2>
         </div>
     </section>
     <section class="about_advantages">
         <div class="about_container container">
             <div class="about_advantages_content">
-                <ul class="about_advantages_list list--reset">
-                    <li class="about_advantages_item">Собственное производство</li>
-                    <li class="about_advantages_item">Индивидуальный пошив</li>
-                    <li class="about_advantages_item">Доставка по всему миру</li>
-                    <li class="about_advantages_item">Уникальный дизайн</li>
-                  </ul>
+                <div class="marquee-container">
+                    <ul class="about_advantages_list list--reset marquee">
+                        <li class="about_advantages_item">Собственное производство</li>
+                        <li class="about_advantages_item">Индивидуальный пошив</li>
+                        <li class="about_advantages_item">Доставка по всему миру</li>
+                        <li class="about_advantages_item">Уникальный дизайн</li>
+                        <!-- Дублируем содержимое -->
+                        <li class="about_advantages_item about_advantages_item1">Собственное производство</li>
+                        <li class="about_advantages_item about_advantages_item1">Индивидуальный пошив</li>
+                        <li class="about_advantages_item about_advantages_item1">Доставка по всему миру</li>
+                        <li class="about_advantages_item about_advantages_item1">Уникальный дизайн</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -117,13 +125,21 @@
         </div>
     </section>
     <section class="catalog_preview_custom">
-        <div class="catalog_preview_сontainer container">
+        <div class="container">
             <h2 class="section_title">Каталог</h2>
         </div>
     </section>
     <section class="catalog_preview">
         <div class="catalog_preview_сontainer container">
             <div class="catalog_preview_list_main_wrapper">
+                <a class="catalog_preview_link catalog_preview_link_custom" href="{% url "goods:index" category_slug='tournir-latina-female' %}">Турнирная одежда<span class="catalog_preview_arrow"><svg class="catalog_arrow_prev"
+                    width="42" height="16" viewBox="0 0 42 16" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M41.7071 8.70711C42.0976 8.31658 42.0976 7.68342 41.7071 7.29289L35.3431 0.928932C34.9526 0.538408 34.3195 0.538408 33.9289 0.928932C33.5384 1.31946 33.5384 1.95262 33.9289 2.34315L39.5858 8L33.9289 13.6569C33.5384 14.0474 33.5384 14.6805 33.9289 15.0711C34.3195 15.4616 34.9526 15.4616 35.3431 15.0711L41.7071 8.70711ZM1 7C0.447716 7 0 7.44772 0 8C0 8.55228 0.447716 9 1 9V7ZM41 7L1 7V9L41 9V7Z"
+                        fill="#2B2B2B" />
+                </svg>
+            </span></a>
                 <ul class="catalog_preview_list list--reset">
                     <li class="catalog_preview_item">
                         <img class="catalog_preview_image" src="{% static "deps/img/main_page/Catalog_preview1.jpg" %}"
@@ -148,6 +164,14 @@
                             alt="Catalog_preview3.jpg">
                     </li>
                 </ul>
+                <a class="catalog_preview_link catalog_preview_link_custom" href="{% url "goods:index" category_slug='tournir-latina-female' %}">Турнирная одежда<span class="catalog_preview_arrow"><svg class="catalog_arrow_prev"
+                    width="42" height="16" viewBox="0 0 42 16" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M41.7071 8.70711C42.0976 8.31658 42.0976 7.68342 41.7071 7.29289L35.3431 0.928932C34.9526 0.538408 34.3195 0.538408 33.9289 0.928932C33.5384 1.31946 33.5384 1.95262 33.9289 2.34315L39.5858 8L33.9289 13.6569C33.5384 14.0474 33.5384 14.6805 33.9289 15.0711C34.3195 15.4616 34.9526 15.4616 35.3431 15.0711L41.7071 8.70711ZM1 7C0.447716 7 0 7.44772 0 8C0 8.55228 0.447716 9 1 9V7ZM41 7L1 7V9L41 9V7Z"
+                        fill="#2B2B2B" />
+                </svg>
+            </span></a>
                 <ul class="catalog_preview_list list--reset">
                     <li class="catalog_preview_item">
                         <img class="catalog_preview_image" src="{% static "deps/img/main_page/Catalog_preview4.jpg" %}"
@@ -172,6 +196,14 @@
                             </span></a>
                     </li>
                 </ul>
+                <a class="catalog_preview_link catalog_preview_link_custom" href="{% url "goods:index" category_slug='tournir-latina-female' %}">Турнирная одежда<span class="catalog_preview_arrow"><svg class="catalog_arrow_prev"
+                    width="42" height="16" viewBox="0 0 42 16" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M41.7071 8.70711C42.0976 8.31658 42.0976 7.68342 41.7071 7.29289L35.3431 0.928932C34.9526 0.538408 34.3195 0.538408 33.9289 0.928932C33.5384 1.31946 33.5384 1.95262 33.9289 2.34315L39.5858 8L33.9289 13.6569C33.5384 14.0474 33.5384 14.6805 33.9289 15.0711C34.3195 15.4616 34.9526 15.4616 35.3431 15.0711L41.7071 8.70711ZM1 7C0.447716 7 0 7.44772 0 8C0 8.55228 0.447716 9 1 9V7ZM41 7L1 7V9L41 9V7Z"
+                        fill="#2B2B2B" />
+                </svg>
+            </span></a>
                 <ul class="catalog_preview_list list--reset">
                     <li class="catalog_preview_item catalog_preview_item_custom">
                         <a class="catalog_preview_link" href="{% url "goods:index" category_slug='tennis-main-collection' %}">Теннисная одежда<span class="catalog_preview_arrow"><svg class="catalog_arrow_prev"
@@ -255,6 +287,7 @@
                             </a>
                         </div>
                     </div>
+                    <div class="container_empty"></div>
 
                 </div>
 
@@ -272,7 +305,7 @@
                 <div class="sale_box_big_wrapper">
                     <img class="sale_image_big" src="{% static "deps/img/main_page/Sale_1.jpg" %}" alt="Sale_1.jpg">
                     <div class="sale_btn_wrapper">
-                        <a class="sale_btn" href="{% url "goods:index" category_slug='tournir-sale' %}">Турнирная одежда<span class="sale_btn_arrow"><svg
+                        <a class="sale_btn" href="{% url "goods:index" category_slug='tournir-sale' %}">Турнирная одежда<span class="sale_btn_arrow"><svg class="sale_name_arrow"
                                     xmlns="http://www.w3.org/2000/svg" width="40" height="16" viewBox="0 0 42 16"
                                     fill="none">
                                     <path
@@ -285,7 +318,7 @@
                     <div class="sale_box_small">
                         <img class="sale_image" src="{% static "deps/img/main_page/Sale_2.jpg" %}" alt="Sale_2.jpg">
                         <div class="sale_btn_wrapper">
-                            <a class="sale_btn" href="{% url "goods:index" category_slug='training-sale' %}">Тренировочная одежда<span class="sale_btn_arrow"><svg
+                            <a class="sale_btn" href="{% url "goods:index" category_slug='training-sale' %}">Тренировочная одежда<span class="sale_btn_arrow"><svg class="sale_name_arrow"
                                         xmlns="http://www.w3.org/2000/svg" width="40" height="16" viewBox="0 0 42 16"
                                         fill="none">
                                         <path
@@ -297,7 +330,7 @@
                     <div class="sale_box_small">
                         <img class="sale_image" src="{% static "deps/img/main_page/Sale_3.jpg" %}" alt="Sale_3.jpg">
                         <div class="sale_btn_wrapper">
-                            <a class="sale_btn" href="{% url "goods:index" category_slug='tennis-sale' %}">Теннисная одежда<span class="sale_btn_arrow"><svg
+                            <a class="sale_btn" href="{% url "goods:index" category_slug='tennis-sale' %}">Теннисная одежда<span class="sale_btn_arrow"><svg class="sale_name_arrow"
                                         xmlns="http://www.w3.org/2000/svg" width="40" height="16" viewBox="0 0 42 16"
                                         fill="none">
                                         <path
@@ -319,7 +352,7 @@
         <div class="faq_container container">
             <div class="faq_content">
                 <h3 class="faq_title_question">как cнять мерки?</h3>
-                <a class="faq_download_link" href="../deps/files/Лист снятия мерок (жен).pdf" download>Скачать лист
+                <a class="faq_download_link" href="{% static "deps/files/Лист снятия мерок (жен).pdf" %}" download>Скачать лист
                     снятия мерок</a>
             </div>
         </div>
@@ -361,12 +394,12 @@
                             </div>
 
                         </div>
-
+                        <p class="present_descr_text">Свяжитесь с нами в мессенджерах для уточнения номинала сертификата <br>
+                            и способа оплаты. Также укажите в сообщении имя получателя, его электоронную почту или
+                            WhatsUpp/Telegram. После подтверждения покупки мы вышлем сертификат получателю, а Вас
+                            оповестим об успешной отправке.</p>
                     </div>
-                    <p class="present_descr_text">Свяжитесь с нами в мессенджерах для уточнения номинала сертификата
-                        и способа оплаты. Также укажите в сообщении имя получателя, его электоронную почту или
-                        WhatsUpp/Telegram. После подтверждения покупки мы вышлем сертификат получателю, а Вас
-                        оповестим об успешной отправке.</p>
+
 
                 </div>
                 <div class="title_text_second_wrapper">
@@ -439,13 +472,15 @@
                     <div class="map_wrapper">
                         <div class="map" id="map"></div>
                     </div>
-    
                 </div>
                 <div class="contacts_right_wrapper">
                     <img class="contacts_right_img" src="{% static "deps/img/main_page/Contacts.jpg" %}" alt="img/main_page/Contacts.jpg">
                 </div>
-            </div>
 
+            </div>
+            <div class="map_wrapper_mobile">
+                <div class="map_mobile" id="map_mobile"></div>
+            </div>
         </div>
     </section>
     <footer class="footer">
@@ -453,7 +488,7 @@
             <div class="footer_content">
                 <div class="footer_left">
                     <div class="footer_left_top">
-                        <a class="footer_contract" href="">Договор оферты</a>
+                        <a class="footer_contract" href="{% static "deps/files/Shiw оферта.docx" %}" download>Договор оферты</a>
                         <p class="footer_year">© 2024, SHIW</p>
                     </div>
                     <a class="footer_left_bottom_link footer_left_bottom" href="https://t.me/Stasya_Poznyak">Powered by D&S studio</a>

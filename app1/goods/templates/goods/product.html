@@ -132,9 +132,9 @@
                     <p class="card_description">{{ product.description }}</p>
                     <p class="card_price">
                         {% if product.show_from %}
-                            от {{ product.price }} руб.
+                            от {{ product.price }} ₽
                         {% else %}
-                            {{ product.price }} руб.
+                            {{ product.price }} ₽
                         {% endif %}
                     </p>
                     <div class="card_btn_wrapper">
@@ -149,7 +149,7 @@
                                 </svg></span>
                         </div>
                         <div class="card_btn_right_wrapper">
-                            <a class="social_link" href="">
+                            <a class="social_link" href="https://t.me/ksu_shavina">
                                 <svg class="telegram" width="34" height="34" viewBox="0 0 34 34" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -157,7 +157,7 @@
                                         fill="#F8F8F8" />
                                 </svg>
                             </a>
-                            <a class="social_link" href="">
+                            <a class="social_link" href="https://wa.me/79200188887">
                                 <svg class="whatsapp" width="34" height="34" viewBox="0 0 34 34" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -178,7 +178,7 @@
             <div class="footer_content">
                 <div class="footer_left">
                     <div class="footer_left_top">
-                        <a class="footer_contract" href="">Договор оферты</a>
+                        <a class="footer_contract" href="{% static "deps/files/Shiw оферта.docx" %}" download>Договор оферты</a>
                         <p class="footer_year">© 2024, SHIW</p>
                     </div>
                     <a class="footer_left_bottom_link footer_left_bottom" href="https://t.me/Stasya_Poznyak">Powered by
