@@ -47,7 +47,7 @@
                 </nav>
                 <div class="header_logo_wrapper">
                     <a class="header_logo_link" href="{% url 'main:index' %}">
-                        <img src="{% static "deps/img/main_page/shiw_logo.png" %}" alt="logo.png">
+                        <img class="header_logo_image" src="{% static "deps/img/main_page/shiw_logo.png" %}" alt="logo.png">
                     </a>
                 </div>
                 <div class="header_socials_wrapper">
@@ -74,13 +74,13 @@
     </header>
     <section class="hero_sect">
     </section>
-    <section class="about">
+    <section id="about" class="about">
         <div class="container">
             <h2 class="section_title">О компании</h2>
         </div>
     </section>
     <section class="about_advantages">
-        <div class="about_container container">
+        <div class="about_container_first container">
             <div class="about_advantages_content">
                 <div class="marquee-container">
                     <ul class="about_advantages_list list--reset marquee">
@@ -98,11 +98,11 @@
             </div>
         </div>
     </section>
-    <section id="about" class="about">
+    <section>
         <div class="about_container container">
             <div class="about_content">
                 <div class="about_content_left_wrapper">
-                    <h3 class="about_left_title">МЫ СОЗДАЕМ НЕ ВЕЩИ, <br> а состояние</h3>
+                    <h3 class="about_left_title">МЫ СОЗДАЕМ <br> НЕ ВЕЩИ, <br> а состояние</h3>
                     <img class="about_left_image" src="{% static "deps/img/main_page/about_left.jpg" alt="left_image.jpeg" %}">
                 </div>
                 <div class="about_content_right_wrapper">
@@ -132,7 +132,7 @@
     <section class="catalog_preview">
         <div class="catalog_preview_сontainer container">
             <div class="catalog_preview_list_main_wrapper">
-                <a class="catalog_preview_link catalog_preview_link_custom" href="{% url "goods:index" category_slug='tournir-latina-female' %}">Турнирная одежда<span class="catalog_preview_arrow"><svg class="catalog_arrow_prev"
+                <a class="catalog_preview_link catalog_preview_link_custom" href="{% url "goods:index" category_slug='training-latina-female-collection' %}">Тренировочная одежда<span class="catalog_preview_arrow"><svg class="catalog_arrow_prev"
                     width="42" height="16" viewBox="0 0 42 16" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -141,7 +141,7 @@
                 </svg>
             </span></a>
                 <ul class="catalog_preview_list list--reset">
-                    <li class="catalog_preview_item">
+                    <li class="catalog_preview_item dispnone">
                         <img class="catalog_preview_image" src="{% static "deps/img/main_page/Catalog_preview1.jpg" %}"
                             alt="Catalog_preview1.jpg">
                     </li>
@@ -173,7 +173,7 @@
                 </svg>
             </span></a>
                 <ul class="catalog_preview_list list--reset">
-                    <li class="catalog_preview_item">
+                    <li class="catalog_preview_item dispnone">
                         <img class="catalog_preview_image" src="{% static "deps/img/main_page/Catalog_preview4.jpg" %}"
                             alt="Catalog_preview4.jpg">
                     </li>
@@ -196,7 +196,7 @@
                             </span></a>
                     </li>
                 </ul>
-                <a class="catalog_preview_link catalog_preview_link_custom" href="{% url "goods:index" category_slug='tournir-latina-female' %}">Турнирная одежда<span class="catalog_preview_arrow"><svg class="catalog_arrow_prev"
+                <a class="catalog_preview_link catalog_preview_link_custom" href="{% url "goods:index" category_slug='tennis-main-collection' %}">Теннисная одежда<span class="catalog_preview_arrow"><svg class="catalog_arrow_prev"
                     width="42" height="16" viewBox="0 0 42 16" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -215,7 +215,7 @@
                                 </svg>
                             </span></a>
                     </li>
-                    <li class="catalog_preview_item">
+                    <li class="catalog_preview_item dispnone">
                         <img class="catalog_preview_image" src="{% static "deps/img/main_page/Catalog_preview7.jpg" %}"
                             alt="Catalog_preview7.jpg">
                     </li>
@@ -423,10 +423,8 @@
                     <h3 class="contacts_subtitle">связаться с нами</h3>
                     <div class="contacts_buttons_wrapper">
                         <div class="contacts_tel_mail_wrapper">
-                            <a class="contacts_link" href="shiw190@mail.ru"><span class="contacts_text">Почта:
-                                </span>shiw190@mail.ru</a>
-                            <a class="contacts_link" href="tel:+79200188887"><span class="contacts_text">Телефон:
-                                </span>+79200188887</a>
+                            <a class="contacts_link" href="shiw190@mail.ru"><span class="contacts_text">Почта: </span> shiw190@mail.ru</a>
+                            <a class="contacts_link" href="tel:+79200188887"><span class="contacts_text">Телефон: </span> +79200188887</a>
                         </div>
                         <div class="contacts_social_wrapper">
                             <div class="contacts_social_buttons_wrapper">
@@ -465,6 +463,24 @@
                             <p class="social_warning">* Запрещен на территории РФ</p>
                         </div>
                     </div>
+                    <div class="mobile_wrapper">
+                        <h3 class="contacts_subtitle">Адрес</h3>
+                        <p class="contacts_adress first">Нижний Новгород, ул. Полтавская, 30 (БЦ “Куб”, 3 этаж)</p>
+                        <p class="contacts_adress second">Пн-Пт с 9.00 до 20.00</p>
+    
+                        <div class="map_wrapper">
+                            <div class="map" id="map"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contacts_right_wrapper">
+                    <img class="contacts_right_img" src="{% static "deps/img/main_page/Contacts.jpg" %}" alt="img/main_page/Contacts.jpg">
+                </div>
+
+
+            </div>
+            <div class="map_wrapper_mobile">
+                <div class="mobile_wrapper_active">
                     <h3 class="contacts_subtitle">Адрес</h3>
                     <p class="contacts_adress first">Нижний Новгород, ул. Полтавская, 30 (БЦ “Куб”, 3 этаж)</p>
                     <p class="contacts_adress second">Пн-Пт с 9.00 до 20.00</p>
@@ -473,12 +489,6 @@
                         <div class="map" id="map"></div>
                     </div>
                 </div>
-                <div class="contacts_right_wrapper">
-                    <img class="contacts_right_img" src="{% static "deps/img/main_page/Contacts.jpg" %}" alt="img/main_page/Contacts.jpg">
-                </div>
-
-            </div>
-            <div class="map_wrapper_mobile">
                 <div class="map_mobile" id="map_mobile"></div>
             </div>
         </div>
@@ -486,14 +496,14 @@
     <footer class="footer">
         <div class="footer_container container">
             <div class="footer_content">
-                <div class="footer_left">
+                <div class="footer_left third_block">
                     <div class="footer_left_top">
                         <a class="footer_contract" href="{% static "deps/files/Shiw оферта.docx" %}" download>Договор оферты</a>
                         <p class="footer_year">© 2024, SHIW</p>
                     </div>
                     <a class="footer_left_bottom_link footer_left_bottom" href="https://t.me/Stasya_Poznyak">Powered by D&S studio</a>
                 </div>
-                <div class="footer_middle">
+                <div class="footer_middle first_block">
                     <ul class="footer_nav_list list--reset">
                         <li class="burger_item"><a class="footer_nav_link" href="#about">О компании</a></li>
                         <li class="burger_item"><a class="footer_nav_link" href="{% url "goods:index" category_slug='training-latina-female-collection' %}">Каталог</a></li>
@@ -505,7 +515,7 @@
                     </ul>
 
                 </div>
-                <div class="footer_right">
+                <div class="footer_right second_block">
                     <a class="footer_link_tel" href="tel:+79200188887">+79200188887</a>
                     <div class="footer_social_wrapper">
                         <a class="social_link" href="https://t.me/ksu_shavina">
