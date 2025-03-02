@@ -3,6 +3,7 @@
         padding-left: 50px;
         padding-right: 50px;
         max-width: 1280px;
+        overflow: hidden;
     }
 }
 
@@ -12,6 +13,7 @@
         padding-left: 30px;
         padding-right: 30px;
         max-width: 1024px;
+        overflow: hidden;
     }
 
     .section_title {
@@ -25,7 +27,7 @@
     .about_advantages_list {
         display: flex;
         gap: 22px;
-      }
+    }
 
 
     /* contacts */
@@ -295,8 +297,9 @@
 
 @media (max-width: 1023px) {
 
-    .container{
+    .container {
         max-width: 768px;
+        overflow: hidden;
     }
 
     .hero_sect {
@@ -357,7 +360,8 @@
     .about_content_left_wrapper {
         gap: 24px;
     }
-    .about_container_first{
+
+    .about_container_first {
         padding-left: 0;
         padding-right: 0;
         max-width: 100%;
@@ -405,7 +409,8 @@
         height: 332px;
     }
 
-    .catalog_preview_item, .catalog_preview_image {
+    .catalog_preview_item,
+    .catalog_preview_image {
         height: 333px;
     }
 
@@ -642,9 +647,11 @@
         width: 100px;
         height: 32px;
     }
-    .header_burger_wrapper{
+
+    .header_burger_wrapper {
         width: 80px;
     }
+
     .telegram {
         width: 32px;
         height: 32px;
@@ -701,7 +708,8 @@
         order: 3;
     }
 
-    .footer_left, .footer_right{
+    .footer_left,
+    .footer_right {
         padding: 0;
         display: flex;
         justify-content: center;
@@ -715,16 +723,18 @@
         margin-bottom: 56px;
     }
 
-    .footer_nav_link, .footer_link_tel {
+    .footer_nav_link,
+    .footer_link_tel {
         font-size: 16px;
     }
 
-    .footer_year, .footer_left_bottom {
+    .footer_year,
+    .footer_left_bottom {
         font-size: 14px;
 
 
     }
-  
+
 
 
     /* ********************************************* */
@@ -732,8 +742,8 @@
         margin-bottom: 104px;
         background-image: url(../img/main_page/main_mobile.jpg);
 
-    
-        
+
+
     }
 
     /* ********************************************* */
@@ -752,7 +762,7 @@
     .about_advantages_content {
         padding: 15px 0 13px 0;
     }
-    
+
 
     .marquee li {
         padding-right: 24px;
@@ -910,10 +920,11 @@
         padding: 12px 20px;
     }
 
-    .sale_content{
+    .sale_content {
         gap: 16px;
     }
-    .sale_btn_arrow{
+
+    .sale_btn_arrow {
         margin-left: 12px;
 
     }
@@ -1123,4 +1134,96 @@
         gap: 24px;
         margin-bottom: 40px;
     }
+
+}
+
+@media (max-width: 429px) {
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+        max-width: 375px;
+        overflow: hidden;
+    }
+
+    .about_container_first {
+        padding-left: 0;
+        padding-right: 0;
+        max-width: 100%;
+    }
+
+    .about_left_title {
+        font-size: 48px;
+    }
+
+    .about_left_image {
+        height: 201px;
+    }
+
+    .big_img {
+        max-width: 233px;
+        height: 341px;
+    }
+
+    .small_image {
+        height: 166px;
+    }
+
+    .about_images_right_wrapper {
+        height: 341px;
+    }
+
+    .catalog_preview_item,
+    .catalog_preview_image {
+        height: 255px;
+    }
+
+    .individual_title {
+        font-size: 40px;
+        line-height: 52px;
+    }
+
+    .individual_title_gold {
+        top: 48px;
+        right: -19px;
+    }
+
+    .present_title,
+    .present_title_custom {
+        font-size: 40px;
+        margin-bottom: 272px;
+    }
+
+    .present_text_btn_wrapper {
+        max-width: 350px;
+        width: 238px;
+        padding: 14px 9px;
+    }
+
+    .individual_btn, .individual_btn_custom {
+        max-width: 117px;
+    }
+
+    .present_arrow {
+        margin-left: 5px;
+    }
+
+    .individual_btn_text {
+        padding: 14px 40px;
+    }
+
+    #overlay{
+        max-width: 375px;
+    }
+
+    .present {
+        background-size: 442px 142px;
+        background-position: 50% 43%;
+        margin-bottom: 104px;
+    }
+
+    .contacts_buttons_wrapper {
+        flex-direction: column;
+        gap: 24px;
+    }
+
 }

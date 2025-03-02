@@ -11,6 +11,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+
 }
 
 .card_arrow path {
@@ -25,7 +26,12 @@
     margin-right: 10px;
 }
 
+.card_arrow{
+    transform: translateY(-1px);
+}
+
 .card_back_btn_wrapper {
+
     margin-bottom: 56px;
 }
 
@@ -140,6 +146,7 @@
 
 .card_btn_left {
     display: flex;
+    justify-content: center;
     align-items: center;
     padding: 12px 52px;
     outline: 1px solid#2B2B2B;
