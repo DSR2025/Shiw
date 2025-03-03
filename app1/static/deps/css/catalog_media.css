@@ -1,0 +1,236 @@
+@media (max-width: 1439px) {
+    .container {
+        padding-left: 50px;
+        padding-right: 50px;
+        max-width: 1280px;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 1279px) {
+    .container {
+        padding-left: 30px;
+        padding-right: 30px;
+        max-width: 1024px;
+        overflow: hidden;
+    }
+
+    .catalog_card {
+        max-width: 226px;
+    }
+
+    .catalog_card_img {
+        height: 338px;
+    }
+    
+    
+}
+
+
+@media (max-width: 1023px) {
+
+    .container {
+        max-width: 768px;
+        overflow: hidden;
+    }
+
+    .catalog_container{
+        overflow: visible;
+    }
+
+    .catalog_navigation_wrapper {
+        display: none;
+    }
+
+    .catalog_button_mobile_wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 12px 20px;
+        background-color: #2B2B2B;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        position: relative;
+    }
+
+    .catalog_right_image {
+        padding: 0;
+        height: 350px;
+    }
+
+    .catalog_sub_image{
+        height: 350px;
+    }
+
+    .catalog_btn_mobile {
+        color: #F8F8F8;
+        font-family: "Fira Sans";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        transition: .3s ease-in-out;
+    }
+
+
+    .catalog_navigation_wrapper_mobile {
+        display: none;
+        /* По умолчанию меню скрыто */
+
+    }
+
+
+
+    .catalog_navigation_wrapper_mobile.active {
+        position: absolute;
+        display: flex;
+        max-width: 280px;
+        /* Показываем меню при добавлении класса active */
+        width: 100%;
+        flex-grow: 1;
+        z-index: 1000;
+        background-color: #2B2B2B;
+        height: 448px;
+        top: 60px;
+        left: 0px;
+        overflow: visible;
+
+    }
+
+    .catalog_content_top {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .catalog {
+        border-top: none;
+        border-bottom: none;
+    }
+
+    .catalog_navbar_mobile {
+        background-color: #2B2B2B;
+        height: 448px;
+    }
+
+    .catalog_sub_menu.active {
+        height: auto !important;
+    }
+
+    .catalog_card {
+        max-width: 222px;
+    }
+
+    .catalog_card_img {
+        height: 333px;
+    }
+
+    .catalog_pagination_wrapper {
+        margin-bottom: 56px;
+    }
+
+    .catalog_cards_list {
+        margin-bottom: 48px;
+    }
+
+}
+
+@media (max-width: 767px){
+
+    
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+        max-width: 430px;
+    }
+
+    .catalog_navigation_wrapper_mobile.active {
+        top: 51px;
+        max-width: 230px;
+        height: 403px;
+    }
+
+    .catalog_sub_image {
+        height: 220px;
+    }
+
+    .catalog_navbar_mobile {
+        background-color: #2B2B2B;
+        height: 403px;
+    }
+
+    .catalog_button_mobile_wrapper {
+        margin-top: 16px;
+        margin-bottom: 16px;
+
+    }
+
+    .catalog_main_menu {
+        font-size: 16px;
+        padding-left: 16px;
+    }
+
+    .catalog_sub_link {
+        padding-left: 16px;
+        font-size: 16px;
+    }
+
+    .catalog_btn_mobile {
+        font-size: 16px;
+    }
+
+    .header_shiw {
+        margin-bottom: 0px;
+    }
+
+    .catalog {
+        margin-bottom: 40px;
+    }
+
+    .catalog_card {
+        max-width: 190px;
+    }
+
+    .catalog_card_img {
+        height: 283px;
+        margin-bottom: 8px;
+    }
+
+    .catalog_cards_list {
+        row-gap: 40px;
+        column-gap: 10px;
+        margin-bottom: 40px;
+    }
+
+    .catalog_card_name {
+        margin-bottom: 4px;
+        font-size: 16px;
+    }
+
+    .catalog_card_price {
+        font-size: 16px;
+    }
+
+    .catalog_pagination_page {
+        font-size: 16px;
+    }
+
+
+
+}
+
+    @media (max-width: 429px){
+
+        .container {
+            padding-left: 10px;
+            padding-right: 10px;
+            max-width: 375px;
+        }
+
+        .catalog_card {
+            max-width: 172px;
+        }
+
+        .catalog_card_img {
+            height: 257px;
+        }
+
+    }

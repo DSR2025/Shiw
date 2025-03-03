@@ -79,3 +79,20 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    const catalogBtn = document.getElementById('catalogBtnMobile');
+    const catalogNav = document.getElementById('catalogNavMobile');
+
+    if (catalogBtn && catalogNav) {
+        catalogBtn.addEventListener('click', function() {
+            catalogNav.classList.toggle('active'); // Переключаем класс active
+        });
+
+        // Закрытие меню при клике вне его области
+        document.addEventListener('click', function(event) {
+            if (!catalogBtn.contains(event.target) && !catalogNav.contains(event.target)) {
+                catalogNav.classList.remove('active');
+            }
+        });
+    }
+});

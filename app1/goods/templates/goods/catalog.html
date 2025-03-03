@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="{% static "deps/css/normilize.css" %}">
     <link rel="stylesheet" href="{% static "deps/css/styles.css" %}">
     <link rel="stylesheet" href="{% static "deps/css/catalog.css" %}">
+    <link rel="stylesheet" href="{% static "deps/css/media.css"%}">
+    <link rel="stylesheet" href="{% static "deps/css/catalog_media.css" %}">
+    <link rel="icon" type="image/svg+xml" href="{% static 'deps/img/main_page/S.svg' %}">
 </head>
 
 <body>
@@ -47,7 +50,7 @@
                 </nav>
                 <div class="header_logo_wrapper">
                     <a class="header_logo_link" href="{% url 'main:index' %}">
-                        <img src="{% static "deps/img/main_page/shiw_logo.png" %}" alt="logo.png">
+                        <img class="header_logo_image" src="{% static "deps/img/main_page/shiw_logo.png" %}" alt="logo.png">
                     </a>
                 </div>
                 <div class="header_socials_wrapper">
@@ -75,6 +78,27 @@
     <section class="catalog">
         <div class="catalog_container container">
             <div class="catalog_content_top">
+                <div class="catalog_button_mobile_wrapper">
+                    <button class="catalog_btn_mobile btn-reset" id="catalogBtnMobile">КОЛЛЕКЦИИ</button>
+                    <div class="catalog_navigation_wrapper catalog_navigation_wrapper_mobile" id="catalogNavMobile">
+                        <div class="catalog_navbar catalog_navbar_mobile">
+                            {% for category in categories %}
+                                {% if not category.parent %} 
+                                    <div class="catalog_main_menu {% if current_category and current_category.parent == category %}active{% endif %}" data-category-id="{{ category.id }}">
+                                        {{ category.name }}
+                                    </div>
+                                    <div class="catalog_sub_menu {% if current_category and current_category.parent == category %}active{% endif %}" data-category-id="{{ category.id }}">
+                                        {% for subcategory in category.get_children %}
+                                            <a class="catalog_sub_link {% if current_category and current_category.slug == subcategory.slug %}active{% endif %}" href="{% url 'catalog:index' subcategory.slug %}" data-target="{{ subcategory.slug }}">
+                                                {{ subcategory.name }}
+                                            </a>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
                 <div class="catalog_navigation_wrapper">
                     <div class="catalog_navbar">
                         {% for category in categories %}
@@ -173,14 +197,14 @@
     <footer class="footer">
         <div class="footer_container container">
             <div class="footer_content">
-                <div class="footer_left">
+                <div class="footer_left third_block">
                     <div class="footer_left_top">
                         <a class="footer_contract" href="{% static "deps/files/Shiw оферта.docx" %}" download>Договор оферты</a>
                         <p class="footer_year">© 2024, SHIW</p>
                     </div>
                     <a class="footer_left_bottom_link footer_left_bottom" href="https://t.me/Stasya_Poznyak">Powered by D&S studio</a>
                 </div>
-                <div class="footer_middle">
+                <div class="footer_middle first_block">
                     <ul class="footer_nav_list list--reset">
                         <li class="burger_item"><a class="footer_nav_link" href="{% url 'main:index' %}#about">О компании</a></li>
                         <li class="burger_item"><a class="footer_nav_link" href="{% url "goods:index" category_slug='training-latina-female-collection' %}">Каталог</a></li>
@@ -192,7 +216,7 @@
                     </ul>
 
                 </div>
-                <div class="footer_right">
+                <div class="footer_right second_block">
                     <a class="footer_link_tel" href="tel:+79200188887">+79200188887</a>
                     <div class="footer_social_wrapper">
                         <a class="social_link" href="https://t.me/ksu_shavina">

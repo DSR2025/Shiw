@@ -98,12 +98,15 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Затемнение */
-  backdrop-filter: blur(5px); /* Размытие */
+  background: rgba(0, 0, 0, 0.5);
+  /* Затемнение */
+  backdrop-filter: blur(5px);
+  /* Размытие */
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
-  z-index: 9; /* Ниже меню, но выше контента */
+  z-index: 9;
+  /* Ниже меню, но выше контента */
 }
 
 #overlay.active {
@@ -179,6 +182,11 @@ body {
   fill: #C0B08A;
 }
 
+
+.catalog_btn_mobile:hover {
+  color: #C0B08A;
+}
+
 .header_nav_link:hover {
   color: #C0B08A;
 }
@@ -195,17 +203,17 @@ body {
   color: #C0B08A;
 }
 
-.footer_link_tel:hover{
+.footer_link_tel:hover {
   color: #C0B08A;
 }
 
-.footer_contract:hover{
+.footer_contract:hover {
   color: #C0B08A;
 }
 
-.footer_left_bottom_link:hover{
+.footer_left_bottom_link:hover {
   color: #C0B08A;
-  
+
 }
 
 .card_btn_back:hover {
@@ -213,12 +221,12 @@ body {
 }
 
 .card_btn_back:hover .card_arrow path {
-  fill: #C0B08A; 
+  fill: #C0B08A;
 }
 
 .card_gallery_pagination_link:hover .card_pag_left path,
 .card_gallery_pagination_link:hover .card_pag_right path {
-    fill: #C0B08A; 
+  fill: #C0B08A;
 }
 
 /* header */
@@ -281,7 +289,7 @@ body {
   color: #C0B08A;
 }
 
-.catalog_sub_link:hover{
+.catalog_sub_link:hover {
   color: #D6C49A;
 }
 
@@ -389,7 +397,7 @@ body {
   gap: 94px;
 }
 
-.contacts_text{
+.contacts_text {
   padding-right: 3px;
 }
 
@@ -400,7 +408,7 @@ body {
   overflow: hidden;
 }
 
-.about_advantages_item1{
+.about_advantages_item1 {
   display: none;
 }
 
@@ -480,7 +488,7 @@ body {
 
 }
 
-.small_image{
+.small_image {
   object-fit: cover;
   height: 270px;
 }
@@ -538,7 +546,7 @@ body {
   align-items: center;
 }
 
-.catalog_arrow_prev{
+.catalog_arrow_prev {
   width: 40px;
   transform: translateY(-2px);
 }
@@ -688,7 +696,7 @@ body {
   transition: .3s ease-in-out;
 }
 
-.container_empty{
+.container_empty {
   display: none;
 }
 
@@ -1069,20 +1077,22 @@ body {
   flex: 1;
 }
 
-.contacts_right_img{
+.contacts_right_img {
   object-fit: cover;
   width: 100%;
   height: 772px;
 
 }
 
-.mobile_wrapper_active{
+.mobile_wrapper_active {
   display: none;
 }
 
-.contacts_left_wrapper, .contacts_right_wrapper {
+.contacts_left_wrapper,
+.contacts_right_wrapper {
   flex: 1;
-  min-width: 0; /* Это предотвращает расширение контейнера при переполнении */
+  min-width: 0;
+  /* Это предотвращает расширение контейнера при переполнении */
 }
 
 
@@ -1098,11 +1108,11 @@ body {
   height: 430px;
 }
 
-.map_wrapper_mobile{
+.map_wrapper_mobile {
   display: none;
 }
 
-[class*="ground-pane"]{
+[class*="ground-pane"] {
   filter: grayscale(1);
 }
 
@@ -1188,19 +1198,20 @@ body {
   transition: .3s ease-in-out;
 }
 
-.footer_social_wrapper{
+.footer_social_wrapper {
   display: flex;
   gap: 20px;
   align-items: center;
   justify-content: center;
 }
-.footer_right{
+
+.footer_right {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.footer_left_bottom_link{
+.footer_left_bottom_link {
   transition: .3s ease-in-out;
   text-decoration: underline;
   text-decoration-style: solid;
@@ -1215,6 +1226,7 @@ body {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -1228,7 +1240,7 @@ body {
 /* анимация прокрутки */
 
 
-.about_advantages_item1{
+.about_advantages_item1 {
   display: none;
 }
 
@@ -1241,6 +1253,6 @@ body {
   padding-left: 48px;
 }
 
-.catalog_preview_link_custom{
+.catalog_preview_link_custom {
   display: none;
 }

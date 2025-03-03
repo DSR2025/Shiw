@@ -168,6 +168,16 @@
         max-width: 430px;
     }
 
+    .card_name {
+        margin-bottom: 8px;
+    }
+
+    .card_description {
+
+        margin-bottom: 8px;
+
+    }
+
     
 
     .card_back_btn_wrapper {
