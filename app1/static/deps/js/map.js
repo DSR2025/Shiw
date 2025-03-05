@@ -1,13 +1,13 @@
-
 ymaps.ready(init);
 
 function init() {
+    // Первая карта
     var myMap = new ymaps.Map("map", {
         center: [56.313623, 44.028301],
         zoom: 15
     });
 
-    var myPlacemark = new ymaps.Placemark([56.313623, 44.028301], {
+    var myPlacemark1 = new ymaps.Placemark([56.313623, 44.028301], {
         hintContent: 'SHIW'
     }, {
         iconLayout: 'default#image',
@@ -16,12 +16,15 @@ function init() {
         iconImageOffset: [-20, -40]
     });
 
-    var myMap = new ymaps.Map("map_mobile", {
+    myMap.geoObjects.add(myPlacemark1);
+
+    // Вторая карта
+    var myMapMobile = new ymaps.Map("map_mobile", {
         center: [56.313623, 44.028301],
         zoom: 15
     });
 
-    var myPlacemark = new ymaps.Placemark([56.313623, 44.028301], {
+    var myPlacemark2 = new ymaps.Placemark([56.313623, 44.028301], {
         hintContent: 'SHIW'
     }, {
         iconLayout: 'default#image',
@@ -30,8 +33,5 @@ function init() {
         iconImageOffset: [-20, -40]
     });
 
-
-    myMap.geoObjects.add(myPlacemark);
-
+    myMapMobile.geoObjects.add(myPlacemark2);
 }
-

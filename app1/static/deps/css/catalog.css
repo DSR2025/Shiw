@@ -1,5 +1,4 @@
 .catalog {
-    border-top: 1.5px solid #C0B08A;
     border-bottom: 1.5px solid #C0B08A;
     margin-bottom: 56px;
 }
@@ -10,6 +9,8 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+
 
 .catalog_navigation_wrapper {
     display: flex;
