@@ -48,30 +48,30 @@
 .card_gallery_btns_list {
     display: flex;
     flex-direction: column;
-    height: 664px;
     gap: 16px;
 }
 
 .card_gallery_item {
-    max-width: 80px;
-    max-height: 120px;
+    width: 80px;
+    height: 120px;
 }
 
 .card_gallery_btn_image {
     width: 100%;
+    width: 80px;
     height: 120px;
     object-fit: cover;
 }
 
 .card_gallery_image_big {
     width: 442px;
-    height: 100%;
+    height: 664px;
     object-fit: cover;
 }
 
 .card_gallery_big {
-    max-width: 442px;
-    max-height: 664px;
+    width: 442px;
+    height: 664px;
 }
 
 .card_gellery_pagination_wrapper {

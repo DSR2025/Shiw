@@ -740,7 +740,7 @@
     /* ********************************************* */
     .hero_sect {
         margin-bottom: 104px;
-        background-image: url(../img/main_page/main_mobile.jpg);
+        background-image: url(../img/main_page/main_mobile.webp);
 
 
 
@@ -1076,6 +1076,10 @@
 
     .contacts {
         margin-bottom: 40px;
+    }
+
+    .contacts_adress {
+        max-width: 300px;
     }
 
     .contacts_tel_mail_wrapper {

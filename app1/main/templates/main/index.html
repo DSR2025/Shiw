@@ -7,10 +7,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shiw</title>
-    <link rel="stylesheet" href="{% static "deps/css/normilize.css"%}">
-    <link rel="stylesheet" href="{% static "deps/css/styles.css"%}">
-    <link rel="stylesheet" href="{% static "deps/css/media.css"%}">
+    {% load compress %}
+    {% compress css %}
+    <link rel="stylesheet" href="{% static 'deps/css/normilize.css' %}">
+    <link rel="stylesheet" href="{% static 'deps/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'deps/css/media.css' %}">
+    {% endcompress %}
     <link rel="icon" type="image/svg+xml" href="{% static 'deps/img/main_page/S.svg' %}">
+    <link rel="preload" href="{% static 'deps/img/main_page/hero_main.webp' %}" as="image">
+    <meta name="description" content="Индивидуальный пошив и продажа стильной тренировочной, турнирной одежды для бальных танцев и тенниса. Создайте уникальный образ с качественными изделиями от SHIW для вашего комфорта на паркете и теннисном корте.">
 </head>
 
 <body>
@@ -104,7 +109,7 @@
             <div class="about_content">
                 <div class="about_content_left_wrapper">
                     <h3 class="about_left_title">МЫ СОЗДАЕМ <br> НЕ ВЕЩИ, <br> а состояние</h3>
-                    <img class="about_left_image" src="{% static "deps/img/main_page/about_left.jpg" alt="left_image.jpeg" %}">
+                    <img class="about_left_image" src="{% static "deps/img/main_page/about_left.webp" alt="left_image.jpeg" %}">
                 </div>
                 <div class="about_content_right_wrapper">
                     <p class="about_right_descr">Шьем костюмы любой сложности. <br> При подборе идеального костюма мы
@@ -112,11 +117,11 @@
                         кроя, разработанного специально для Вас.</p>
                     <div class="about_images_right_wrapper">
                         <div class="big_image_wrapper">
-                            <img class="big_img" src="{% static "deps/img/main_page/about_right_big.jpg" %}" alt="about_right_big.png">
+                            <img class="big_img" src="{% static "deps/img/main_page/about_right_big.webp" %}" alt="about_right_big.png">
                         </div>
                         <div class="about_small_images_wrapper">
-                            <img class="small_image" src="{% static "deps/img/main_page/about_right_small1.jpg" %}" alt="">
-                            <img class="small_image" src="{% static "deps/img/main_page/about_right_small2.jpg" %}" alt="">
+                            <img class="small_image" src="{% static "deps/img/main_page/about_right_small1.webp"%}" alt="about_right_small1.webp">
+                            <img class="small_image" src="{% static "deps/img/main_page/about_right_small2.webp"%}" alt="about_right_small2.webp">
                         </div>
                     </div>
                 </div>
@@ -143,7 +148,7 @@
             </span></a>
                 <ul class="catalog_preview_list list--reset">
                     <li class="catalog_preview_item dispnone">
-                        <img class="catalog_preview_image" src="{% static "deps/img/main_page/Catalog_preview1.jpg" %}"
+                        <img class="catalog_preview_image" src="{% static "deps/img/main_page/Catalog_preview1.webp" %}"
                             alt="Catalog_preview1.jpg">
                     </li>
                     <li class="catalog_preview_item catalog_preview_item_custom">
@@ -157,11 +162,11 @@
                             </span></a>
                     </li>
                     <li class="catalog_preview_item">
-                        <img class="catalog_preview_image" src="{% static "deps/img/main_page/Catalog_preview2.jpg" %}"
+                        <img class="catalog_preview_image" src="{% static "deps/img/main_page/Catalog_preview2.webp" %}"
                             alt="Catalog_preview2.jpg">
                     </li>
                     <li class="catalog_preview_item">
-                        <img class="catalog_preview_image" src="{% static "deps/img/main_page/Catalog_preview3.jpg" %}"
+                        <img class="catalog_preview_image" src="{% static "deps/img/main_page/Catalog_preview3.webp" %}"
                             alt="Catalog_preview3.jpg">
                     </li>
                 </ul>
@@ -175,15 +180,15 @@
             </span></a>
                 <ul class="catalog_preview_list list--reset">
                     <li class="catalog_preview_item dispnone">
-                        <img class="catalog_preview_image" src="{% static "deps/img/main_page/Catalog_preview4.jpg" %}"
+                        <img class="catalog_preview_image" src="{% static "deps/img/main_page/Catalog_preview4.webp" %}"
                             alt="Catalog_preview4.jpg">
                     </li>
                     <li class="catalog_preview_item">
-                        <img class="catalog_preview_image" src="{% static "deps/img/main_page/Catalog_preview5.jpg" %}"
+                        <img class="catalog_preview_image" src="{% static "deps/img/main_page/Catalog_preview5.webp" %}"
                             alt="Catalog_preview5.jpg">
                     </li>
                     <li class="catalog_preview_item">
-                        <img class="catalog_preview_image" src="{% static "deps/img/main_page/Catalog_preview6.jpg" %}"
+                        <img class="catalog_preview_image" src="{% static "deps/img/main_page/Catalog_preview6.webp" %}"
                             alt="Catalog_preview6.jpg">
                     </li>
                     <li class="catalog_preview_item catalog_preview_item_custom">
@@ -217,16 +222,16 @@
                             </span></a>
                     </li>
                     <li class="catalog_preview_item dispnone">
-                        <img class="catalog_preview_image" src="{% static "deps/img/main_page/Catalog_preview7.jpg" %}"
-                            alt="Catalog_preview7.jpg">
+                        <img class="catalog_preview_image" src="{% static "deps/img/main_page/Catalog_preview7.webp" %}"
+                            alt="Catalog_preview7.webp">
                     </li>
                     <li class="catalog_preview_item">
-                        <img class="catalog_preview_image" src="{% static "deps/img/main_page/Catalog_preview8.jpg" %}"
-                            alt="Catalog_preview8.jpg">
+                        <img class="catalog_preview_image" src="{% static "deps/img/main_page/Catalog_preview8.webp" %}"
+                            alt="Catalog_preview8.webp">
                     </li>
                     <li class="catalog_preview_item">
-                        <img class="catalog_preview_image" src="{% static "deps/img/main_page/Catalog_preview9.jpg" %}"
-                            alt="Catalog_preview9.jpg">
+                        <img class="catalog_preview_image" src="{% static "deps/img/main_page/Catalog_preview9.webp" %}"
+                            alt="Catalog_preview9.webp">
                     </li>
                 </ul>
             </div>
@@ -304,7 +309,7 @@
         <div class="sale_container container">
             <div class="sale_content">
                 <div class="sale_box_big_wrapper">
-                    <img class="sale_image_big" src="{% static "deps/img/main_page/Sale_1.jpg" %}" alt="Sale_1.jpg">
+                    <img class="sale_image_big" src="{% static "deps/img/main_page/Sale_1.webp" %}" alt="Sale_1.jpg">
                     <div class="sale_btn_wrapper">
                         <a class="sale_btn" href="{% url "goods:index" category_slug='tournir-sale' %}">Турнирная одежда<span class="sale_btn_arrow"><svg class="sale_name_arrow"
                                     xmlns="http://www.w3.org/2000/svg" width="40" height="16" viewBox="0 0 42 16"
@@ -317,7 +322,7 @@
                 </div>
                 <div class="sale_box_small_wrapper">
                     <div class="sale_box_small">
-                        <img class="sale_image" src="{% static "deps/img/main_page/Sale_2.jpg" %}" alt="Sale_2.jpg">
+                        <img class="sale_image" src="{% static "deps/img/main_page/Sale_2.webp" %}" alt="Sale_2.jpg">
                         <div class="sale_btn_wrapper">
                             <a class="sale_btn" href="{% url "goods:index" category_slug='training-sale' %}">Тренировочная одежда<span class="sale_btn_arrow"><svg class="sale_name_arrow"
                                         xmlns="http://www.w3.org/2000/svg" width="40" height="16" viewBox="0 0 42 16"
@@ -329,7 +334,7 @@
                         </div>
                     </div>
                     <div class="sale_box_small">
-                        <img class="sale_image" src="{% static "deps/img/main_page/Sale_3.jpg" %}" alt="Sale_3.jpg">
+                        <img class="sale_image" src="{% static "deps/img/main_page/Sale_3.webp" %}" alt="Sale_3.jpg">
                         <div class="sale_btn_wrapper">
                             <a class="sale_btn" href="{% url "goods:index" category_slug='tennis-sale' %}">Теннисная одежда<span class="sale_btn_arrow"><svg class="sale_name_arrow"
                                         xmlns="http://www.w3.org/2000/svg" width="40" height="16" viewBox="0 0 42 16"
@@ -475,7 +480,7 @@
                     </div>
                 </div>
                 <div class="contacts_right_wrapper">
-                    <img class="contacts_right_img" src="{% static "deps/img/main_page/Contacts.jpg" %}" alt="img/main_page/Contacts.jpg">
+                    <img class="contacts_right_img" src="{% static "deps/img/main_page/Contacts.webp" %}" alt="img/main_page/Contacts.jpg">
                 </div>
 
 
@@ -500,7 +505,7 @@
                 <div class="footer_left third_block">
                     <div class="footer_left_top">
                         <a class="footer_contract" href="{% static "deps/files/Shiw оферта.docx" %}" download>Договор оферты</a>
-                        <p class="footer_year">© 2024, SHIW</p>
+                        <p class="footer_year">© 2025, SHIW</p>
                     </div>
                     <a class="footer_left_bottom_link footer_left_bottom" href="https://t.me/Stasya_Poznyak">Powered by D&S studio</a>
                 </div>
@@ -545,9 +550,13 @@
 
 </body>
 
+{% load compress %}
+{% compress js %}
 <script defer type="module" src="{% static 'deps/js/main.js' %}"></script>
 <script defer type="module" src="{% static 'deps/js/scroll.js' %}"></script>
+<script defer type="module" src="{% static 'deps/js/map.js' %}"></script>
+{% endcompress %}
 <script src="https://unpkg.com/scrollreveal"></script>
 <script src="https://api-maps.yandex.ru/2.1/?apikey=ВАШ_API_КЛЮЧ&lang=ru_RU" type="text/javascript"></script>
-<script defer type="module" src="{% static 'deps/js/map.js' %}"></script>
+
 </html>

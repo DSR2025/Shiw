@@ -7,11 +7,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shiw</title>
-    <link rel="stylesheet" href="{% static "deps/css/normilize.css" %}">
-    <link rel="stylesheet" href="{% static "deps/css/styles.css" %}">
-    <link rel="stylesheet" href="{% static "deps/css/catalog.css" %}">
-    <link rel="stylesheet" href="{% static "deps/css/media.css"%}">
-    <link rel="stylesheet" href="{% static "deps/css/catalog_media.css" %}">
+    {% load compress %}
+    {% compress css %}
+    <link rel="stylesheet" href="{% static 'deps/css/normilize.css' %}">
+    <link rel="stylesheet" href="{% static 'deps/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'deps/css/catalog.css' %}">
+    <link rel="stylesheet" href="{% static 'deps/css/media.css' %}">
+    <link rel="stylesheet" href="{% static 'deps/css/catalog_media.css' %}">
+    {% endcompress %}
     <link rel="icon" type="image/svg+xml" href="{% static 'deps/img/main_page/S.svg' %}">
 </head>
 
@@ -118,17 +121,17 @@
                     </div>
                 </div>
                 <div class="catalog_right_image" id="catalog_right_image">
-                    <img class="catalog_sub_image" data-target="tennis-sale" src="{% static 'deps/img/catalog_page/sale.jpg' %}" alt="Tennis Sale">
-                    <img class="catalog_sub_image" data-target="tournir-sale" src="{% static 'deps/img/catalog_page/sale.jpg' %}" alt="Tournir Sale">
-                    <img class="catalog_sub_image" data-target="training-sale" src="{% static 'deps/img/catalog_page/sale.jpg' %}" alt="Training Sale">
-                    <img class="catalog_sub_image" data-target="tennis-main-collection" src="{% static 'deps/img/catalog_page/tennis-main-collection.jpg' %}" alt="Tennis Main Collection">
-                    <img class="catalog_sub_image" data-target="tournir-latina-male" src="{% static 'deps/img/catalog_page/tournir-latina-male.jpg' %}" alt="Tournir Latina Male">
-                    <img class="catalog_sub_image" data-target="tournir-latina-female" src="{% static 'deps/img/catalog_page/tournir-latina-female.jpg' %}" alt="Tournir Latina Female">
-                    <img class="catalog_sub_image" data-target="tango" src="{% static 'deps/img/catalog_page/tango.jpg' %}" alt="Tango">
-                    <img class="catalog_sub_image" data-target="training-standart-male-collection" src="{% static 'deps/img/catalog_page/training-standart-male-collection.jpg' %}" alt="Training Standart Male Collection">
-                    <img class="catalog_sub_image" data-target="training-standart-female-collection" src="{% static 'deps/img/catalog_page/training-standart-female-collection.jpg' %}" alt="Training Standart Female Collection">
-                    <img class="catalog_sub_image" data-target="training-latina-male-collection" src="{% static 'deps/img/catalog_page/training-latina-male-collection.jpg' %}" alt="Training Latina Male Collection">
-                    <img class="catalog_sub_image" data-target="training-latina-female-collection" src="{% static 'deps/img/catalog_page/training-latina-female-collection.jpg' %}" alt="Training Latina Female Collection">
+                    <img class="catalog_sub_image" data-target="tennis-sale" src="{% static 'deps/img/catalog_page/sale.webp' %}" alt="Tennis Sale">
+                    <img class="catalog_sub_image" data-target="tournir-sale" src="{% static 'deps/img/catalog_page/sale.webp' %}" alt="Tournir Sale">
+                    <img class="catalog_sub_image" data-target="training-sale" src="{% static 'deps/img/catalog_page/sale.webp' %}" alt="Training Sale">
+                    <img class="catalog_sub_image" data-target="tennis-main-collection" src="{% static 'deps/img/catalog_page/tennis-main-collection.webp' %}" alt="Tennis Main Collection">
+                    <img class="catalog_sub_image" data-target="tournir-latina-male" src="{% static 'deps/img/catalog_page/tournir-latina-male.webp' %}" alt="Tournir Latina Male">
+                    <img class="catalog_sub_image" data-target="tournir-latina-female" src="{% static 'deps/img/catalog_page/tournir-latina-female.webp' %}" alt="Tournir Latina Female">
+                    <img class="catalog_sub_image" data-target="tango" src="{% static 'deps/img/catalog_page/tango.webp' %}" alt="Tango">
+                    <img class="catalog_sub_image" data-target="training-standart-male-collection" src="{% static 'deps/img/catalog_page/training-standart-male-collection.webp' %}" alt="Training Standart Male Collection">
+                    <img class="catalog_sub_image" data-target="training-standart-female-collection" src="{% static 'deps/img/catalog_page/training-standart-female-collection.webp' %}" alt="Training Standart Female Collection">
+                    <img class="catalog_sub_image" data-target="training-latina-male-collection" src="{% static 'deps/img/catalog_page/training-latina-male-collection.webp' %}" alt="Training Latina Male Collection">
+                    <img class="catalog_sub_image" data-target="training-latina-female-collection" src="{% static 'deps/img/catalog_page/training-latina-female-collection.webp' %}" alt="Training Latina Female Collection">
                 </div>
             </div>
         </div>
@@ -244,8 +247,10 @@
 
 
 </body>
-<script defer type="module" src="{% static "deps/js/main.js" %}"></script>
-<script defer type="module" src="{% static "deps/js/catalog.js" %}"></script>
-
+{% load compress %}
+{% compress js %}
+<script defer type="module" src="{% static 'deps/js/main.js' %}"></script>
+<script defer type="module" src="{% static 'deps/js/catalog.js' %}"></script>
+{% endcompress %}
 
 </html>

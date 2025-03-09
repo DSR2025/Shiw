@@ -5,6 +5,7 @@
     url('../fonts/FiraSans-Italic.ttf') format('truetype');
   font-weight: normal;
   font-style: italic;
+  font-display: swap; /* Добавлено */
 }
 
 @font-face {
@@ -14,6 +15,7 @@
     url('../fonts/FiraSans-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
+  font-display: swap; /* Добавлено */
 }
 
 @font-face {
@@ -23,6 +25,7 @@
     url('../fonts/FiraSansMedium-Italic.ttf') format('truetype');
   font-weight: 500;
   font-style: italic;
+  font-display: swap; /* Добавлено */
 }
 
 @font-face {
@@ -32,6 +35,7 @@
     url('../fonts/FiraSansLight.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
+  font-display: swap; /* Добавлено */
 }
 
 @font-face {
@@ -41,6 +45,7 @@
     url('../fonts/FiraSans.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap; /* Добавлено */
 }
 
 @font-face {
@@ -50,6 +55,7 @@
     url('../fonts/FiraSansMedium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
+  font-display: swap; /* Добавлено */
 }
 
 @font-face {
@@ -59,6 +65,7 @@
     url('../fonts/FiraSansLight-Italic.ttf') format('truetype');
   font-weight: 300;
   font-style: italic;
+  font-display: swap; /* Добавлено */
 }
 
 @font-face {
@@ -68,6 +75,7 @@
     url('../fonts/FiraSans-BoldItalic.ttf') format('truetype');
   font-weight: bold;
   font-style: italic;
+  font-display: swap; /* Добавлено */
 }
 
 
@@ -374,7 +382,7 @@ body {
 /* ************* */
 
 .hero_sect {
-  background-image: url(../img/main_page/hero_main.jpg);
+  background-image: url(../img/main_page/hero_main.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -833,7 +841,7 @@ body {
 .present {
   height: 595px;
   background-color: #2B2B2B;
-  background-image: url(../img/main_page/present.png);
+  background-image: url(../img/main_page/present.webp);
   background-repeat: no-repeat;
   background-size: 1634px 524px;
   background-position: center;

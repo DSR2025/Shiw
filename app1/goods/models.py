@@ -2,6 +2,9 @@ from django.db import models
 from django.utils.text import slugify
 from django.core.exceptions import ValidationError
 from mptt.models import MPTTModel, TreeForeignKey
+from django.dispatch import receiver
+from django.db.models.signals import post_delete
+import os
 
 class Categories(MPTTModel):
     name = models.CharField(max_length=150, verbose_name='Название')
@@ -22,12 +25,10 @@ class Categories(MPTTModel):
         return self.name
 
     def clean(self):
-
         if Categories.objects.filter(name=self.name, parent=self.parent).exclude(pk=self.pk).exists():
             raise ValidationError('Категория с таким названием уже существует в этой родительской категории.')
 
     def save(self, *args, **kwargs):
-
         if not self.slug:
             base_slug = slugify(self.name)
             self.slug = base_slug
@@ -45,6 +46,12 @@ class Products(models.Model):
     category = models.ForeignKey(to=Categories, on_delete=models.CASCADE, verbose_name='Категория')
     show_from = models.BooleanField(default=False, verbose_name='Добавить "ОТ" к цене')
 
+    def delete(self, *args, **kwargs):
+        # Удаляем все связанные изображения перед удалением товара
+        for image in self.images.all():
+            image.delete()
+        super().delete(*args, **kwargs)
+
     class Meta:
         db_table = 'product'
         verbose_name = 'Продукт'
@@ -57,7 +64,6 @@ class Products(models.Model):
         return f"{self.id:05}"
 
     def save(self, *args, **kwargs):
-
         if not self.slug:
             base_slug = slugify(self.name)
             self.slug = base_slug
@@ -66,7 +72,6 @@ class Products(models.Model):
                 self.slug = f"{base_slug}-{counter}"
                 counter += 1
         super().save(*args, **kwargs)  
-
 
 class ProductImage(models.Model):
     product = models.ForeignKey(Products, on_delete=models.CASCADE, related_name='images')
@@ -79,3 +84,11 @@ class ProductImage(models.Model):
     def __str__(self):
         return f"Изображение для {self.product.name}"
 
+@receiver(post_delete, sender=ProductImage)
+def delete_product_image_file(sender, instance, **kwargs):
+    """
+    Удаляет файл изображения при удалении объекта ProductImage.
+    """
+    if instance.image:
+        if os.path.isfile(instance.image.path):
+            os.remove(instance.image.path)

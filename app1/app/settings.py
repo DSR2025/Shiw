@@ -57,8 +57,8 @@ STATICFILES_FINDERS = [
     'compressor.finders.CompressorFinder',
 ]
 
-COMPRESS_ENABLED = True  # Включает сжатие
-COMPRESS_OFFLINE = False  # Позволяет сжимать файлы заранее (рекомендуется для продакшена)
+COMPRESS_ENABLED = True  
+COMPRESS_OFFLINE = False  
 
 TEMPLATES = [
     {
